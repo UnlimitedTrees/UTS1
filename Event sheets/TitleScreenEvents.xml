@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TitleScreenEvents</name>
+    <events>
+        <event-block sid="853265598333431">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="623832065189071" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="944436280223706" type="BlackFadeout" />
+                <action id="-16" name="Wait" sid="245397584454584" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="0" name="Play" sid="573635035244136" type="Audio">
+                    <param id="0" name="Audio file">TitleScreen (Sonic CD JP - Title Screen SMPS remix by Jubbalub)</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="564025211678974">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="802356581103062" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="647382411158016" type="Camera">
+                    <param id="0" name="X">Self.X+2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="353799249284569">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="483549753401847" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="638712848233810" type="Camera">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">4440</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="525173494311282" type="BlackFadeout">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="933876820361965" type="BlackFadeout">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="162434841199802" type="BlackFadeout" />
+                <action id="-16" name="Wait" sid="419701477674313" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="33" name="Stop all" sid="685064766782804" type="Audio" />
+                <action id="-2" name="Go to layout" sid="371880000964523" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="137098466312293" title="TitleAnimation" />
+    </events>
+</c2eventsheet>

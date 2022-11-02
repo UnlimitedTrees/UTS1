@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SpecialSelectEvents</name>
+    <events>
+        <event-group description="" sid="307085155169667" title="Controls2">
+            <sub-events>
+                <event-block sid="287084427520102">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="521584176353783" type="Keyboard">
+                            <param id="0" name="Key">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="900286351131016" type="Audio">
+                            <param id="0" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="932627045291705">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="942568632564543" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="982432104580834" type="SelectedSlot">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Y co-ordinate">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="556686598386549" type="SelectedSlot">
+                            <param id="0" name="Y">SelectedSlot.Y-72</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="769267722768659" type="SelectedSlot">
+                            <param id="0" name="Instance variable">Slot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="561628330880417" type="Audio">
+                            <param id="0" name="Audio file">Score</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="375622338441258">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="239445062334679" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="850721340835179" type="SelectedSlot">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Y co-ordinate">184</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="746920896967165" type="SelectedSlot">
+                            <param id="0" name="Y">SelectedSlot.Y+72</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="915547006593961" type="SelectedSlot">
+                            <param id="0" name="Instance variable">Slot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="391135007926411" type="Audio">
+                            <param id="0" name="Audio file">Score</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="931075888568396">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="725656414699993" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="489884680908014" type="Audio" />
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="610767453435488" type="BlackFadeout">
+                            <param id="0" name="Fade-in time">1.0</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="254162286919973" type="BlackFadeout">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="332773711789209" type="BlackFadeout" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="279740859436751">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="301912279197566" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="749325315565309" type="System">
+                                    <param id="0" name="Seconds">1.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="976848623892419" type="System">
+                                    <param id="0" name="Layout">UnlimitedTreesZone</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="837507486243094">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="677918746124152" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="509080647829236" type="System">
+                                    <param id="0" name="Seconds">1.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="245291604270168" type="System">
+                                    <param id="0" name="Layout">WarehouseZone</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="172850702844022">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="681843023507321" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="466993479345736" type="System">
+                                    <param id="0" name="Seconds">1.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="403079570666012" type="System">
+                                    <param id="0" name="Layout">GreenHillZone</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="675893771611521">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="873311277548991" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="934599671646481" type="BlackFadeout" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

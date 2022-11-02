@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>OptionsMenuEvents</name>
+    <events>
+        <variable constant="0" name="MusicPlaylist" sid="431152842132033" static="0" type="number">0</variable>
+        <variable constant="0" name="DebugEnabled" sid="928565483294933" static="0" type="number">0</variable>
+        <variable constant="0" name="SpindashDisabled" sid="438711373647738" static="0" type="number">0</variable>
+        <event-group description="" sid="940980383594741" title="OptionsControls">
+            <sub-events>
+                <event-block sid="107131242571706">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="199226489625638" type="Keyboard">
+                            <param id="0" name="Key">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="524909818253968" type="Audio">
+                            <param id="0" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="474117289285028">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="431847835313227" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="306937300469877" type="SelectedSlot">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Y co-ordinate">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="410513987027169" type="SelectedSlot">
+                            <param id="0" name="Y">SelectedSlot.Y-72</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="513637096803947" type="SelectedSlot">
+                            <param id="0" name="Instance variable">Slot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="669384335326792" type="Audio">
+                            <param id="0" name="Audio file">Score</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="285275618080897">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="761786025064401" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="957564435807095" type="SelectedSlot">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Y co-ordinate">184</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="982480072338690" type="SelectedSlot">
+                            <param id="0" name="Y">SelectedSlot.Y+72</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="360993010112874" type="SelectedSlot">
+                            <param id="0" name="Instance variable">Slot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="944092578748772" type="Audio">
+                            <param id="0" name="Audio file">Score</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="220220513533623">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="323605147572371" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="601771797919816" type="BlackFadeout">
+                            <param id="0" name="Fade-in time">1.0</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="454389470001635" type="BlackFadeout">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="148823966093453" type="BlackFadeout" />
+                        <action id="-16" name="Wait" sid="114890248898687" type="System">
+                            <param id="0" name="Seconds">1.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="644903159822599" type="System">
+                            <param id="0" name="Layout">MainMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="139890663741442" title="SoundTestEvents">
+            <sub-events>
+                <event-block sid="416455209936317">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="115839563009282" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="370065050567515" type="SoundTestText">
+                            <param id="0" name="Text">Self.SoundTest_Selected</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="431732113197396">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="912270418075030" type="System">
+                                    <param id="0" name="Variable">MusicPlaylist</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="644114043109854" type="SoundPlaylistText">
+                                    <param id="0" name="Text">&quot;SAGE 2017&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="386059550462136">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="243017846850794" type="System">
+                                    <param id="0" name="Variable">MusicPlaylist</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="815407737254327" type="SoundPlaylistText">
+                                    <param id="0" name="Text">&quot;BETA OST&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="895041143715542">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="121238116384618" type="SoundTestText">
+                            <param id="0" name="Instance variable">SoundTest_Selected</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="508476625908571" type="SoundTestText">
+                            <param id="0" name="Instance variable">SoundTest_Selected</param>
+                            <param id="1" name="Value">99</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="173994302813307">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="161019512783215" type="SoundTestText">
+                            <param id="0" name="Instance variable">SoundTest_Selected</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">99</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="389126828212549" type="SoundTestText">
+                            <param id="0" name="Instance variable">SoundTest_Selected</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="840088830170222">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="255798956126322" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="192514891314903">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="774022992078407" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="807791942959256" type="System">
+                                    <param id="0" name="Variable">MusicPlaylist</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="967020393241812" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="429571514138939" type="System">
+                                    <param id="0" name="Variable">MusicPlaylist</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="835359799280310">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="330067802465146" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="963470905710895" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="565086186406047">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="426191137489755" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="510535381531411">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="762707199965716" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="120286517378250" type="System">
+                                    <param id="0" name="Variable">MusicPlaylist</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="377668958007108" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="799055966131204" type="System">
+                                    <param id="0" name="Variable">MusicPlaylist</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="902717958039461">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="396671945785774" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="989863688107098" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="429550829010624">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="472126452393865" type="Keyboard">
+                            <param id="0" name="Key">74</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="653983638588120" type="SelectedSlot">
+                            <param id="0" name="Instance variable">Slot</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="787371150628280" type="SoundTestText">
+                            <param id="0" name="Instance variable">SoundTest_Selected</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="894140838529149">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="808941055314205" type="Keyboard">
+                            <param id="0" name="Key">76</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="956570462910496" type="SelectedSlot">
+                            <param id="0" name="Instance variable">Slot</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Stop all</comment>
+                        <event-block sid="955638034203303">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="112408646149959" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="413865582671896" type="Audio" />
+                                <action id="0" name="Set text" sid="727703797702395" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG *&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="452400628571733" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER *&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="320579404275798" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE *&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Egg Plant</comment>
+                        <event-block sid="629096482347541">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="929777203858207" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="500534377361177">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="517459650290336" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="354549489928961" type="Audio" />
+                                        <action id="0" name="Play" sid="295411632822457" type="Audio">
+                                            <param id="0" name="Audio file">EggPlant1Music (Metropolis Street Racer - Am I Only Dreaming)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="520573774407542" type="SoundInfo1">
+                                            <param id="0" name="Text">&quot;SONG * AM I ONLY DREAMING&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="505655363238474" type="SoundInfo2">
+                                            <param id="0" name="Text">&quot;COMPOSER * RICHARD JACQUES&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="640522542524590" type="SoundInfo3">
+                                            <param id="0" name="Text">&quot;USAGE * EGG PLANT ZONE&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="743082746554664">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="267283264620878" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="484844241824420" type="Audio" />
+                                        <action id="0" name="Play" sid="187713346378324" type="Audio">
+                                            <param id="0" name="Audio file">EggPlantBeta1 (Sonic CD US - Wacky Workbench Present SMPS remix by A-S-H)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="807302886921188" type="SoundInfo1">
+                                            <param id="0" name="Text">&quot;SONG * WACKY WORKBENCH PRESENT US&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="442275292661300" type="SoundInfo2">
+                                            <param id="0" name="Text">&quot;REMIXER * A-S-H&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="693901409641201" type="SoundInfo3">
+                                            <param id="0" name="Text">&quot;USAGE * EGG PLANT BETA&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Hot Forest</comment>
+                        <event-block sid="807485833358700">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="179221758472858" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="471331233440294">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="607071779330632" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="160620655053013" type="Audio" />
+                                        <action id="0" name="Play" sid="933918933836298" type="Audio">
+                                            <param id="0" name="Audio file">HotForest1Music (Daytona USA Saturn - Pounding Pavement)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="651685584953616" type="SoundInfo1">
+                                            <param id="0" name="Text">&quot;SONG * POUNDING PAVEMENT&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="138159877698600" type="SoundInfo2">
+                                            <param id="0" name="Text">&quot;COMPOSER * TAKENOBU MITSUYOSHI&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="278160401663259" type="SoundInfo3">
+                                            <param id="0" name="Text">&quot;USAGE * HOT FOREST ZONE&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="931494738802802">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="129380829476587" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="374681588606665" type="Audio" />
+                                        <action id="0" name="Play" sid="146509805032728" type="Audio">
+                                            <param id="0" name="Audio file">HotForestBeta1 (Shantae Half Genie Hero - Counterfiet Mermaids SMPS By Crash)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;hotforest1&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="694714472713067" type="SoundInfo1">
+                                            <param id="0" name="Text">&quot;SONG * SHANTAE - COUNTERFIET MERMAIDS&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="440699018260766" type="SoundInfo2">
+                                            <param id="0" name="Text">&quot;REMIXER * CRASH&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="677113874021816" type="SoundInfo3">
+                                            <param id="0" name="Text">&quot;USAGE * HOT FOREST ZONE&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Bright Paradise</comment>
+                        <event-block sid="176743773997008">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="721707982134522" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="173156200818911">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="412794100666694" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="207623401114949" type="Audio" />
+                                        <action id="0" name="Play" sid="819045910847464" type="Audio">
+                                            <param id="0" name="Audio file">BrightParadise1Music (TMNT 1990 Movie - 9.95)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="110780947571663" type="SoundInfo1">
+                                            <param id="0" name="Text">&quot;SONG * TMNT - 9.95&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="216335546455797" type="SoundInfo2">
+                                            <param id="0" name="Text">&quot;COMPOSER * SPUNKADELIC&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="845074251086715" type="SoundInfo3">
+                                            <param id="0" name="Text">&quot;USAGE * BRIGHT PARADISE ZONE&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="803992673169059">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="522042065834756" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="216332149995300" type="Audio" />
+                                        <action id="0" name="Play" sid="698094337859143" type="Audio">
+                                            <param id="0" name="Audio file">BrightParadiseBeta1 (Love Live! School Idol Project - Snow Halation SMPS remix by Joenick)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="898675095695429" type="SoundInfo1">
+                                            <param id="0" name="Text">&quot;SONG * LOVE LIVE - SNOW HALATION&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="239488955703665" type="SoundInfo2">
+                                            <param id="0" name="Text">&quot;REMIXER * JOENICK&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="589145950994067" type="SoundInfo3">
+                                            <param id="0" name="Text">&quot;USAGE * STAR LIGHT ZONE BETA&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Cold Mines</comment>
+                        <event-block sid="960227069951506">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="626742007330591" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="870627925110237" type="Audio" />
+                                <action id="0" name="Play" sid="246440747471966" type="Audio">
+                                    <param id="0" name="Audio file">ColdMines1 (Last Resort - The Melting Point</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="259707825502135" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * LAST RESORT - THE MELTING POINT&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="357758428222698" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER * &#x09;TOSHIO SHIMIZU&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="490053351289435" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * COLD MINES ZONE&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Atmosphere Escape</comment>
+                        <event-block sid="866326815046847">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="198080039684329" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="373412031075413" type="Audio" />
+                                <action id="0" name="Play" sid="294384974175644" type="Audio">
+                                    <param id="0" name="Audio file">AtmosphereEscape1 (Mario Hoops 3 on 3 - Sherbet Land (CD Ver)</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="739947167034151" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * MARIO HOOPS 3 ON 3 - SHERBET LAND&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="340407316823233" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER * &#x09;MASAYOSHI SOKEN&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="291667355370602" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * ATMOSPHERE ESCAPE ZONE&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Egg Brain Act 1</comment>
+                        <event-block sid="103823065256644">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="130117027903810" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="746180547583368" type="Audio" />
+                                <action id="0" name="Play" sid="169201334859981" type="Audio">
+                                    <param id="0" name="Audio file">EggBrain1 (LaTale - Hanger)</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="687460018550398" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * LATALE - HANGER&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="551288370377763" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER * &#x09;DINY&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="793725048834074" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * EGG BRAIN ZONE ACT 1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Egg Brain Act 2</comment>
+                        <event-block sid="952508361749471">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="866139407465964" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="192687047875857" type="Audio" />
+                                <action id="0" name="Play" sid="337363955184355" type="Audio">
+                                    <param id="0" name="Audio file">EggBrain2 (Greylancer - Stage 1)</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="440589446886795" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * GREYLANCER - STAGE 1&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="915554140674874" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;DEVELOPER * MASAYA&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="440264994844331" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * EGG BRAIN ZONE ACT 2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>EPZBoss</comment>
+                        <event-block sid="541046445869052">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="836231368725529" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="545571155287882" type="Audio" />
+                                <action id="0" name="Play" sid="192696009794868" type="Audio">
+                                    <param id="0" name="Audio file">EggPlantBossMusic</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="658296086166334" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * MAMOURUKUN CURSE - THE CURSE&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="192463275459131" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER * YOUSUKE YASUI&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="620655180209544" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * EGG PLANT BOSS&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>HFZBoss</comment>
+                        <event-block sid="465078912588536">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="478523562459082" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="170479320953508" type="Audio" />
+                                <action id="0" name="Play" sid="488739363859106" type="Audio">
+                                    <param id="0" name="Audio file">HotForestBossMusic (Mamorukun Curse - Mantra (Final Boss 1)</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="561501234823311" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * MAMOURUKUN CURSE - MANTRA&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="771219661140864" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER * YOUSUKE YASUI&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="902669905285871" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * HOT FOREST BOSS&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>TitleScreen</comment>
+                        <event-block sid="839094029458322">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="261910218359332" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="816134169165603" type="Audio" />
+                                <action id="0" name="Play" sid="614855259063960" type="Audio">
+                                    <param id="0" name="Audio file">TitleScreen (Sonic CD JP - Title Screen SMPS remix by Jubbalub)</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="408705557839335" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * SONIC CD JP TITLE SCREEN&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="303029331182524" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;REMIXER * JUBBALUB&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="440635824697861" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * TITLE SCREEN&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Invinciblity</comment>
+                        <event-block sid="511725100014564">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="670445618306915" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="244017941996604" type="Audio" />
+                                <action id="0" name="Play" sid="252642883256828" type="Audio">
+                                    <param id="0" name="Audio file">Invinciblity (Hatsune Miku - Ai Kotoba)</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="663437954983361" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * HATSUNE MIKU - AI KOTOBA&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="158962876217501" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;REMIXER * JOENICK&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="583811098869351" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * INVINCIBLITY&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>SpeedUp</comment>
+                        <event-block sid="335418181338621">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="195503874808711" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="861298402646592" type="Audio" />
+                                <action id="0" name="Play" sid="817145112256765" type="Audio">
+                                    <param id="0" name="Audio file">SpeedUp</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="727281633699884" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * SONIC CD BETA SPEED UP&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="374482770229886" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER * NAOFUMI HATAYA&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="538890857521779" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * SPEED SHOES&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Extras Menu</comment>
+                        <event-block sid="173029432770203">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="161290879604435" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="105204733710040" type="Audio" />
+                                <action id="0" name="Play" sid="879369923803017" type="Audio">
+                                    <param id="0" name="Audio file">ExtrasMenu (Hideki Naganuma - Ebb &amp; Flow)</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="515603124334683" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * EBB AND FLOW&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="290536887608184" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER * HIDEKI NAGANUMA&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="559496251532233" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * EXTRAS MENU&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>UT Zone</comment>
+                        <event-block sid="792206883940584">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="840461896961602" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">14</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="33" name="Stop all" sid="232242036281169" type="Audio" />
+                                <action id="0" name="Play" sid="302572381671494" type="Audio">
+                                    <param id="0" name="Audio file">UnlimitedTreesZone (19.5 - Buken &amp; The Peshay</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="212898229015577" type="SoundInfo1">
+                                    <param id="0" name="Text">&quot;SONG * BUKEN AND THE PESHAY&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="602945426614633" type="SoundInfo2">
+                                    <param id="0" name="Text">&quot;COMPOSER * 19.5&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="655595713669776" type="SoundInfo3">
+                                    <param id="0" name="Text">&quot;USAGE * UNLIMITED TREES ZONE&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Unused GHZ1</comment>
+                        <event-block sid="126678872638102">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="110471258950032" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">98</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="252732029540867">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="259095833476013" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="151392094452793" type="Audio" />
+                                        <action id="0" name="Play" sid="652201503212389" type="Audio">
+                                            <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by A-S-H)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="606151611484589" type="SoundInfo1">
+                                            <param id="0" name="Text">&quot;SONG * SONIC 2 8 BIT GREEN HILLS&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="195465028176420" type="SoundInfo2">
+                                            <param id="0" name="Text">&quot;REMIXER * A-S-H&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="314538101828002" type="SoundInfo3">
+                                            <param id="0" name="Text">&quot;USAGE * GREEN HILL ZONE BETA&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Unused GHZ2</comment>
+                        <event-block sid="770483957423552">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="700613120190376" type="SoundTestText">
+                                    <param id="0" name="Instance variable">SoundTest_Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">99</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="806975540343334">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="136671629414804" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="33" name="Stop all" sid="749639300274485" type="Audio" />
+                                        <action id="0" name="Play" sid="639372010372758" type="Audio">
+                                            <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by Joenick)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="444726684468664" type="SoundInfo1">
+                                            <param id="0" name="Text">&quot;SONG * SONIC 2 8 BIT GREEN HILLS&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="832516277624892" type="SoundInfo2">
+                                            <param id="0" name="Text">&quot;REMIXER * JOENICK&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="832125198362926" type="SoundInfo3">
+                                            <param id="0" name="Text">&quot;USAGE * UNUSED&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="715903208712396">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="231157452971003" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="405591636781829" type="BlackFadeout" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

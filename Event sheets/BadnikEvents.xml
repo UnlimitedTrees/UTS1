@@ -1,0 +1,1588 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BadnikEvents</name>
+    <events>
+        <event-group description="" sid="810102203399263" title="BadnikPopped">
+            <sub-events>
+                <event-block sid="969002089166988">
+                    <conditions>
+                        <condition id="0" name="On function" sid="670109833537518" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="899496741853418" type="Audio">
+                            <param id="0" name="Audio file">Pop</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="605962488133469" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="128004338532996" type="Player">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="931776490957658" type="Player">
+                            <param id="0" name="Object">Points</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="331655477840687" type="Player">
+                            <param id="0" name="Object">Flicky</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="346031053555213" title="Motobug">
+            <sub-events>
+                <event-block sid="525721477331548">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="904642835964119" type="Motobug" />
+                        <condition id="-7" name="Compare instance variable" sid="395330052268130" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="800399309537558" type="Motobug">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="165681722044380">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="792842927442656" type="Motobug" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="491561382336389" type="Motobug">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="766657403140841">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="200327030481061" type="System" />
+                        <condition id="-3" name="Is on-screen" sid="839427155579770" type="Motobug" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="367654819717061" type="Motobug">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="792420469574764">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="942425323727086" type="Player">
+                            <param id="0" name="Object">Motobug</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="983082416368364" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="122964279371211" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="557904831063820" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="456251883342044" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725134315095233">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="541621513801354" type="Player">
+                            <param id="0" name="Object">Motobug</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="830168202618820">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="241892014207828" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="815686694779961" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="181854430863936" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="457802775012196" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="969289776001072" type="Motobug" />
+                                <action id="0" name="Call function" sid="401703227290814" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="400095954061066">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="656239611090093" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Motobug.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="379129985108101">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="802811105364710" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="987841048031890" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="681247952750271">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="218260543189391" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="665733612842880" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="824899174543790">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="148871694364400" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Motobug</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="288758017668604" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="798455268152956" type="Motobug" />
+                        <action id="0" name="Call function" sid="609929267226322" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="845879049892008">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="309642331635151" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="342898822937759" type="Motobug" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="785416132579202" type="Motobug">
+                            <param id="0" name="Object">Motobug_DustParticle</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="946016278633931">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="647212659033680" type="Motobug_DustParticle">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="666080573161947" type="Motobug_DustParticle" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="977352796113750" title="Yadrin">
+            <sub-events>
+                <event-block sid="694628147681363">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="419876629411681" type="Yadrin" />
+                        <condition id="-7" name="Compare instance variable" sid="741330785043392" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="938494785237601" type="Yadrin">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="132366469952175">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="466378416826239" type="Yadrin" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="300699644033372" type="Yadrin">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="370513150342825">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="823351355643668" type="System" />
+                        <condition id="-3" name="Is on-screen" sid="383181819015971" type="Yadrin" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="513839732877699" type="Yadrin">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="766400382900161">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="836193719955970" type="Player">
+                            <param id="0" name="Object">Yadrin</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="745694622990036" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="907981673966987" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="377462465380983" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="759193552398795" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="110375066272658">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="399269319222554" type="Player">
+                            <param id="0" name="Object">Yadrin</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="657411604457983">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="648111978079426" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="797996669367007" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="115813236795102" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="219430399392098" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="214532406919919" type="Yadrin" />
+                                <action id="0" name="Call function" sid="881632980165622" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="172522778483459">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="922116660417758" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Yadrin.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="903667351396908">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="154823347370192" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="642230066145003" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="661396669997982">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="162337205341315" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="506587067066409" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="728695560856460">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="330524433223552" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Yadrin</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="944373577501234" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="278718577311128" type="Yadrin" />
+                        <action id="0" name="Call function" sid="564489406216871" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="402953942623810" title="Jaws">
+            <sub-events>
+                <event-block sid="962861878358673">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="841063658545737" type="System" />
+                        <condition id="-3" name="Is on-screen" sid="538425174398225" type="Jaws" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="585182256951299" type="Jaws">
+                            <param id="0" name="X">Jaws.X-0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="960679836348722">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="204733461171673" type="Player">
+                            <param id="0" name="Object">Jaws</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="690839955924069" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="263902146454503" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="464276157367273" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="342133852557463" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="501442710433922">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="115051686406446" type="Player">
+                            <param id="0" name="Object">Jaws</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="131012369858602">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="839994870103398" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="684097896377572" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="703567816901807" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="608509661827658" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="799425124769634" type="Jaws" />
+                                <action id="0" name="Call function" sid="939687544521838" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="934220039450297">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="961529738784189" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Jaws.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="751691303503092">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="242927468202430" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="322626087435289" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="117183452614241">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="553320800689191" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="265459304467705" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="425289772831119">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="124065858133674" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Jaws</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="115528454294413" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="715960178009655" type="Jaws" />
+                        <action id="0" name="Call function" sid="352630731688400" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="501468546978989" title="Batbrain">
+            <sub-events>
+                <event-block sid="354072764002774">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="965583935104488" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="326723135258282" type="Batbrain">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="672294096761467" type="Batbrain">
+                            <param id="0" name="X">Batbrain.X-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="596812389210122">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="707603091476977" type="Batbrain">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="676993638859653" type="Batbrain">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="125483475979132" type="Batbrain">
+                            <param id="0" name="Animation">&quot;Fall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="382707349469244" type="Batbrain">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="679408818005204" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="909061885903933" type="Batbrain">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="593176442633538" type="Batbrain">
+                            <param id="0" name="Animation">&quot;Fly&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="414817990579286" type="Batbrain">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="389526884965845" type="Batbrain">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="494256939080701">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="861347047380806" type="Player">
+                            <param id="0" name="Object">Batbrain</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="732197605702425" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="730470338075381" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="285669944429847" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="890572883749206" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="797524200434472">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="454811922280875" type="Player">
+                            <param id="0" name="Object">Batbrain</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="985680680392353">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="787249448626291" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="203069739756520" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="725083620429879" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="664536579288471" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="545255184286390" type="Batbrain" />
+                                <action id="0" name="Call function" sid="321058715232322" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="102832059368747">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="324285210827300" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Batbrain.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="792510113332546">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="548292313664324" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="203951802638828" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="374405368490812">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="336759427258704" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="563620359356529" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="996991530079196">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="790715313620350" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Batbrain</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="239934758308852" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="233445784962875" type="Batbrain" />
+                        <action id="0" name="Call function" sid="317593507783842" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="347369020690144" title="Splats">
+            <sub-events>
+                <event-block sid="723719315551206">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="688004823109020" type="Splats" />
+                        <condition id="-7" name="Compare instance variable" sid="779166440487780" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="957226220654397" type="Splats">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="700071687072406">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="592004918569436" type="Splats" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="553850897738867" type="Splats">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="751258602427785">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="640071208424837" type="System" />
+                        <condition id="-3" name="Is on-screen" sid="102382701202433" type="Splats" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="497637635609197" type="Splats">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="202561198827572">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="555261841289611" type="Splats" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="532147484797338" type="Splats">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="817102280034723" type="Splats">
+                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="511935940324307">
+                    <conditions>
+                        <condition behavior="Platform" id="6" name="On fall" sid="906409882327893" type="Splats" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="202062888600171" type="Splats">
+                            <param id="0" name="Animation">&quot;Falling&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="772508509217393">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="934896735040088" type="Player">
+                            <param id="0" name="Object">Splats</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="761913448182391" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="998303184879410" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="573423644764724" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="371233338063443" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="574546564852066">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="467781577222485" type="Player">
+                            <param id="0" name="Object">Splats</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="280459054974276">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="753177922691830" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="512087887596729" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="127425467259982" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="721836613988848" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="915971916585445" type="Splats" />
+                                <action id="0" name="Call function" sid="661663243847655" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="351285249941915">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="842074726930841" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Splats.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="228217938031959">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="345462211579949" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="124477909469117" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="900161512298296">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="455100959135772" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="719846379458904" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="764332356152248">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="209695031650808" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Splats</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="893328828704489" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="191085568379793" type="Splats" />
+                        <action id="0" name="Call function" sid="906864950123734" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="998203202084929" title="Frogger">
+            <sub-events>
+                <event-block sid="210833127363310">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="957180988357988" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="268830709792292">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="103854084922596" type="Player">
+                            <param id="0" name="Object">Frogger</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="952722214223729" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="719792972881071" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="365488149061948" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="754730105501917" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="211219053783487">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="196019365533412" type="Player">
+                            <param id="0" name="Object">Frogger</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="577982746674200">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="890662055707862" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="628432414061932" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="430717238095848" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="162668503845131" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="489395970988834" type="Frogger" />
+                                <action id="0" name="Call function" sid="375619353634590" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="727696839622104">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="808095431308047" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Frogger.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="248790663381189">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="894759359971920" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="776957048802654" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="614814622333439">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="792074468709462" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="692941086027886" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="361870699764306">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="395693153059412" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Frogger</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="916541638779916" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="337235358142844" type="Frogger" />
+                        <action id="0" name="Call function" sid="614466986923032" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="857485068442893" title="Caterkiller">
+            <sub-events>
+                <event-block sid="438769401780997">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="955675022205970" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="800957901940872">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="643820930683577" type="Caterkiller">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="789115629293941" type="Caterkiller">
+                                    <param id="0" name="X">Self.X-0.7</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="326167436186495" type="Caterkiller" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="931192273814863">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="722776921439147" type="Caterkiller">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="362080653698066" type="Caterkiller">
+                                    <param id="0" name="X">Self.X+0.7</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="844479987089979" type="Caterkiller" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="152672485366101">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="352829103115589" type="Caterkiller">
+                            <param id="0" name="Object">Caterkiller_MovementChanger</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="809463497086305">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="408763713814425" type="Caterkiller">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="626650491975299" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="120748868462049" type="Caterkiller">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="498090903055327">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="808290455266910" type="Caterkiller">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="965089707868025" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="661320505296572" type="Caterkiller">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="686689775483091">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="175319033477361" type="Player">
+                            <param id="0" name="Object">Caterkiller</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="378948740280850" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="241578513049793" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="376311464203216" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="519796397579996" type="Caterkiller">
+                            <param id="0" name="Instance variable">Move</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="653395445881020" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="722823406716765">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="722317051878406" type="Player">
+                            <param id="0" name="Object">Caterkiller</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="243236768244900" type="Caterkiller">
+                            <param id="0" name="Instance variable">Move</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="126205741037910">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="205728624484483" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="927472600188977" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="356751262875258" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="429313010082893" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="294419524793730" type="Caterkiller" />
+                                <action id="0" name="Call function" sid="148090548660471" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="571183312857693">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="523918265158525" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Caterkiller.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="655850325517520">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="396176398422319" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="973310354565024" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="125894804932164">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="724497050422025" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="737767865482506" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="770231873648170">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="348360844611784" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Caterkiller</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="260630068218950" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="219096216450153" type="Caterkiller">
+                            <param id="0" name="Instance variable">Move</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="945886059043138" type="Caterkiller" />
+                        <action id="0" name="Call function" sid="143867860586488" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="594747344190519" title="BPZ_TimeVortex">
+            <sub-events>
+                <comment>Time Vortex badnik</comment>
+                <event-block sid="797288838189895">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="721997739452802" type="System" />
+                        <condition id="-3" name="Is on-screen" sid="449717093017404" type="BPZ_TimeVortexBadnik" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="650286942908536" type="BPZ_TimeVortexBadnik">
+                            <param id="0" name="X">Self.X-0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="165764293852075">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="757728100375194" type="System">
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="869334805098270" type="BPZ_TimeVortexBadnik" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="855691667708455" type="BPZ_TimeVortexBadnik">
+                            <param id="0" name="Object">MiniEggmech</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="733273652408024">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="251232603439948" type="Player">
+                            <param id="0" name="Object">BPZ_TimeVortexBadnik</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="979789775394160" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="838950439644074" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="212495330893727" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="693863295719842" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="661608631203258">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="278011224763169" type="Player">
+                            <param id="0" name="Object">BPZ_TimeVortexBadnik</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="291835339246846">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="332048749103563" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="354527977892183" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="340221151718299" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="234499665793291" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="859706476499325" type="BPZ_TimeVortexBadnik" />
+                                <action id="0" name="Call function" sid="980557877921628" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="596329515930291">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="951819423273907" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">BPZ_TimeVortexBadnik.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="463286546343960">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="945073206720363" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="416012119983770" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="988675105390431">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="599600186435565" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="982386835472722" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="741347408449975">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="865574536525141" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">BPZ_TimeVortexBadnik</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="790431140589328" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="570281803951172" type="BPZ_TimeVortexBadnik" />
+                        <action id="0" name="Call function" sid="559137529724827" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Mini Eggmech</comment>
+                <event-block sid="623587244315623">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="437441375153015" type="System" />
+                        <condition id="-3" name="Is on-screen" sid="896510001844277" type="MiniEggmech" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="901644273883076" type="MiniEggmech">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="737477777012411">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="721525406152499" type="MiniEggmech" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="129446431364390" type="MiniEggmech">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="882808484944783">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="571263178991236" type="MiniEggmech" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="949687700985837" type="MiniEggmech">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="318278152604934">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="494710221288125" type="Player">
+                            <param id="0" name="Object">MiniEggmech</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="937853499537629" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="250192550818592" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="557698354668674" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="276168152095921" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="333926973728410">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="176879659305505" type="Player">
+                            <param id="0" name="Object">MiniEggmech</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="648802934572944">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="843084232692663" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="550392620454581" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="114730932439469" type="Player">
+                                    <param id="0" name="Instance variable">IsSpindashing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="146219599394346" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="663509962532587" type="MiniEggmech" />
+                                <action id="0" name="Call function" sid="865932217739795" type="Function">
+                                    <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="343280798374349">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="435998227327021" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">MiniEggmech.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="346318552823365">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Key is down" sid="271536592966852" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="179619234929292" type="Player">
+                                                    <param id="0" name="Vector Y">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="234558722186015">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="746302043946502" type="Keyboard">
+                                                    <param id="0" name="Key">74</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="253397491007320" type="Player">
+                                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="107228234694781">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="793476248790969" type="Player">
+                            <param id="0" name="Object">MiniEggmech</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="883099875319020" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="770781596752150" type="MiniEggmech" />
+                        <action id="0" name="Call function" sid="541604568772231" type="Function">
+                            <param id="0" name="Name">&quot;OnBadnikPopped&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

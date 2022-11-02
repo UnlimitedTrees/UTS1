@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CreditsSplashScreenEvents</name>
+    <events>
+        <event-block sid="216536884298012">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="887273453820542" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="669869511463192" type="BlackFadeout" />
+                <action id="-16" name="Wait" sid="931146508543832" type="System">
+                    <param id="0" name="Seconds">7.0</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="116599937726058" type="BlackFadeout">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="603551973190621" type="BlackFadeout">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="761559935094909" type="BlackFadeout" />
+                <action id="-16" name="Wait" sid="464323199424428" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="500853330242653" type="System">
+                    <param id="0" name="Layout">ControlsSplashScreen</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Preload sound effects</comment>
+        <event-block sid="671945263007403">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="337420912073653" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="690974550488148" type="Audio">
+                    <param id="0" name="Audio file">Balloon</param>
+                </action>
+                <action id="4" name="Preload" sid="205367840695972" type="Audio">
+                    <param id="0" name="Audio file">Break</param>
+                </action>
+                <action id="4" name="Preload" sid="600734175886416" type="Audio">
+                    <param id="0" name="Audio file">Bubble</param>
+                </action>
+                <action id="4" name="Preload" sid="375208066518456" type="Audio">
+                    <param id="0" name="Audio file">Bubble_Bounce</param>
+                </action>
+                <action id="4" name="Preload" sid="805525716385504" type="Audio">
+                    <param id="0" name="Audio file">Checkpoint</param>
+                </action>
+                <action id="4" name="Preload" sid="405088416629136" type="Audio">
+                    <param id="0" name="Audio file">CrystalSound</param>
+                </action>
+                <action id="4" name="Preload" sid="335452035622091" type="Audio">
+                    <param id="0" name="Audio file">Dash</param>
+                </action>
+                <action id="4" name="Preload" sid="689891608009269" type="Audio">
+                    <param id="0" name="Audio file">Death</param>
+                </action>
+                <action id="4" name="Preload" sid="250734504704447" type="Audio">
+                    <param id="0" name="Audio file">Death_Spike</param>
+                </action>
+                <action id="4" name="Preload" sid="772423617363731" type="Audio">
+                    <param id="0" name="Audio file">Drown</param>
+                </action>
+                <action id="4" name="Preload" sid="794428852358367" type="Audio">
+                    <param id="0" name="Audio file">Fire_Dash</param>
+                </action>
+                <action id="4" name="Preload" sid="743311914154776" type="Audio">
+                    <param id="0" name="Audio file">Jumping</param>
+                </action>
+                <action id="4" name="Preload" sid="352665233079831" type="Audio">
+                    <param id="0" name="Audio file">Lightning_Spark</param>
+                </action>
+                <action id="4" name="Preload" sid="755273394333209" type="Audio">
+                    <param id="0" name="Audio file">Pop</param>
+                </action>
+                <action id="4" name="Preload" sid="322201364509080" type="Audio">
+                    <param id="0" name="Audio file">Ring</param>
+                </action>
+                <action id="4" name="Preload" sid="698484950704717" type="Audio">
+                    <param id="0" name="Audio file">Ring_Lose</param>
+                </action>
+                <action id="4" name="Preload" sid="279185526712737" type="Audio">
+                    <param id="0" name="Audio file">Score</param>
+                </action>
+                <action id="4" name="Preload" sid="840718373209899" type="Audio">
+                    <param id="0" name="Audio file">Shield_Fire</param>
+                </action>
+                <action id="4" name="Preload" sid="917079920888724" type="Audio">
+                    <param id="0" name="Audio file">Shield_Instant</param>
+                </action>
+                <action id="4" name="Preload" sid="102972752414546" type="Audio">
+                    <param id="0" name="Audio file">Shield_Lightning</param>
+                </action>
+                <action id="4" name="Preload" sid="141328309473583" type="Audio">
+                    <param id="0" name="Audio file">Shield_Normal</param>
+                </action>
+                <action id="4" name="Preload" sid="327494442037675" type="Audio">
+                    <param id="0" name="Audio file">Shield_Water</param>
+                </action>
+                <action id="4" name="Preload" sid="701938054472809" type="Audio">
+                    <param id="0" name="Audio file">Skid</param>
+                </action>
+                <action id="4" name="Preload" sid="912529448417628" type="Audio">
+                    <param id="0" name="Audio file">Spin</param>
+                </action>
+                <action id="4" name="Preload" sid="951954731877575" type="Audio">
+                    <param id="0" name="Audio file">Spindash_Charge</param>
+                </action>
+                <action id="4" name="Preload" sid="143327284594709" type="Audio">
+                    <param id="0" name="Audio file">Spring</param>
+                </action>
+                <action id="4" name="Preload" sid="587629559023167" type="Audio">
+                    <param id="0" name="Audio file">WaterSplash</param>
+                </action>
+                <action id="4" name="Preload" sid="285766531596890" type="Audio">
+                    <param id="0" name="Audio file">Bumper</param>
+                </action>
+                <action id="4" name="Preload" sid="512465885060821" type="Audio">
+                    <param id="0" name="Audio file">PacMan_Chomp</param>
+                </action>
+                <action id="4" name="Preload" sid="386662114323312" type="Audio">
+                    <param id="0" name="Audio file">PacMan_Dot</param>
+                </action>
+                <action id="4" name="Preload" sid="243828318287631" type="Audio">
+                    <param id="0" name="Audio file">PacMan_PowerPellet</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

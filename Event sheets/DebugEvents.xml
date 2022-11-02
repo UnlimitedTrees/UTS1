@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DebugEvents</name>
+    <events>
+        <event-group description="" sid="321597847167262" title="DebugText">
+            <sub-events>
+                <event-block sid="449794970092421">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="965000908836153" type="System" />
+                        <condition id="-14" name="Compare variable" sid="187217920111368" type="System">
+                            <param id="0" name="Variable">DebugEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="924665549673821" type="DebugText">
+                            <param id="0" name="Text">&quot;PLAYER&quot; &amp; Player.Player &amp; &quot;             X&quot; &amp; Player.X &amp; &quot;          Y&quot; &amp; Player.Y &amp; &quot;         FPS&quot; &amp;  fps &amp; &quot;        SPEED&quot; &amp;  Player.SonicPhysics.Speed &amp; &quot;               IS SPINNING&quot; &amp; Player.IsSpinning &amp; &quot;                    IS ROLLING&quot; &amp; Player.IsRolling &amp; &quot;                DASHABLED&quot; &amp; SpindashDisabled &amp; &quot;       SPINDASHSPD&quot; &amp; Player.SpindashPower &amp; &quot;          AIR&quot; &amp; Player.Water_AirLevel &amp; &quot;        PATH&quot; &amp; Player.Path</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888034379688370">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="795669335753391" type="System">
+                            <param id="0" name="Variable">DebugEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="970455616323698" type="System">
+                            <param id="0" name="Layer">&quot;HUD_DebugMode&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="722541480411570" title="DebugControls">
+            <sub-events>
+                <comment>Toggling Debug Controls</comment>
+                <event-block sid="242434501532451">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="407375796857341" type="Keyboard">
+                            <param id="0" name="Key">75</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="104020581517824" type="Player">
+                            <param id="0" name="Instance variable">DebugControlsActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="724262865826021" type="System">
+                            <param id="0" name="Variable">DebugEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="961426020479295" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="100166331424703" type="Player">
+                            <param id="0" name="Instance variable">DebugControlsActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="479955084662966" type="PlayerMask_Sonic">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="437530505105514" type="Player">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="737177130777744" type="Camera">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="316431492580590" type="DeathPlane">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="251951975853817" type="PathSwapper">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="351760808806753" type="PathSwapper_Path1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="327227064415875" type="PathSwapper_Path2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="14" name="Set enabled" sid="201477430305836" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="925376192490272" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="349294605456773" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="198764882074367">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="858941961960964" type="Keyboard">
+                            <param id="0" name="Key">75</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="782818414926658" type="Player">
+                            <param id="0" name="Instance variable">DebugControlsActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="580573888426904" type="System">
+                            <param id="0" name="Variable">DebugEnabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="943072865361939" type="Player">
+                            <param id="0" name="Instance variable">DebugControlsActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="795467391812580" type="PlayerMask_Sonic">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="572180066263044" type="DeathPlane">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="680979262637421" type="PathSwapper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="962153840166526" type="PathSwapper_Path1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="689692388150058" type="PathSwapper_Path2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="14" name="Set enabled" sid="548374468485015" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="736840591177945" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="371499112448917" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Controls</comment>
+                <event-block sid="307190125964024">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="196285167326919" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="161754439417243" type="Player">
+                            <param id="0" name="Instance variable">DebugControlsActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="805419546367920" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="424397546444960">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="465593796161165" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="254493342416244" type="Player">
+                            <param id="0" name="Instance variable">DebugControlsActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="381343630807258" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="303428545331156">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="621987829432225" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="531525033933165" type="Player">
+                            <param id="0" name="Instance variable">DebugControlsActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="340272433686189" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="649015407209920">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="119165530704398" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="679889293170052" type="Player">
+                            <param id="0" name="Instance variable">DebugControlsActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="110821055751607" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

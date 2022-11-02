@@ -1,0 +1,1714 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EggPlantZone1Events</name>
+    <events>
+        <include>TitleCardEvents</include>
+        <include>CollisionEvents</include>
+        <include>BasicControlEvents</include>
+        <event-block sid="216340726320929">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="549721378580309" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="412394399509323" type="System">
+                    <param id="0" name="Variable">ZoneID</param>
+                    <param id="1" name="Value">1.1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="288912278584930" type="TitleCard_ActNumber">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="652457361988937" type="TitleCard_Text_ZoneName">
+                    <param id="0" name="Text">&quot; EGG PLANT&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="487040974403245">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="574725652036429" type="System">
+                            <param id="0" name="Variable">MusicPlaylist</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="302248963533391" type="Audio">
+                            <param id="0" name="Audio file">EggPlant1Music (Metropolis Street Racer - Am I Only Dreaming)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;eggplant1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="365595986225900">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="423937062262951" type="System">
+                            <param id="0" name="Variable">MusicPlaylist</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="563764515936876" type="Audio">
+                            <param id="0" name="Audio file">EggPlantBeta1 (Sonic CD US - Wacky Workbench Present SMPS remix by A-S-H)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;eggplant1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="729598170039606" title="LongBumper">
+            <sub-events>
+                <event-block sid="107071341587337">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="252566597219036" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="231749621314939" type="LongBumper">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="750750292192707" type="LongBumper" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="328580029989403" type="LongBumper">
+                            <param id="0" name="X">Self.X+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="711370987294933">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="615227432710674" type="Player">
+                            <param id="0" name="Object">LongBumper</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="717812627527076" type="Player">
+                            <param id="0" name="Vector Y">-420</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="565961109892511" type="LongBumper">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="155751498870289" type="LongBumper">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="451662009359730" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="0" name="Play" sid="469217023338636" type="Audio">
+                            <param id="0" name="Audio file">Bumper</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="168228967981535">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="554763124271457" type="LongBumper">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="744732887529931" type="LongBumper">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="324633682611880" title="BounceLaser">
+            <sub-events>
+                <event-block sid="578925297594020">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="314889851447089" type="Player">
+                            <param id="0" name="Object">BounceyLaser</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="585481352296167" type="BounceyLaser">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="367869482494388" type="Player">
+                            <param id="0" name="Vector X">800 * cos(angle(BounceyLaser.X, BounceyLaser.Y, Player.X, Player.Y))</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="911186877867506" type="Player">
+                            <param id="0" name="Vector Y">1200 * sin(angle(BounceyLaser.X, BounceyLaser.Y, Player.X, Player.Y))</param>
+                        </action>
+                        <action id="0" name="Play" sid="560471751690163" type="Audio">
+                            <param id="0" name="Audio file">Bumper</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="212876803090676">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="889385030563717" type="BounceyLaser">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="437075541661554" type="BounceyLaser">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="382245067971398">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="250882015390713" type="BounceyLaser">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="162535096109896" type="BounceyLaser">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="485708896308435" title="PuyoSection">
+            <sub-events>
+                <event-block sid="209693810199828">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="241165270037007" type="Player">
+                            <param id="0" name="Object">Puyo_DeathCollision</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="443607131703580" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="949591509933502" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="714586980873445" type="Puyo_DeathCollision">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="246172873822548" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="810268066804854" type="DeathPlane" />
+                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="502010495900625" type="Player">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="217558204009867" type="Player">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="960714211345913" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="503441480981008" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="132249088148285" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="993269985121053" type="Camera" />
+                        <action id="-11" name="Subtract from" sid="206871279422543" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="668075061934507" type="Audio">
+                            <param id="0" name="Audio file">Death</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="549860269299389" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="656366164468963" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="735790203705647">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="648975792304710" type="Puyo_Blue" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="928735869550648" type="Puyo_Blue">
+                            <param id="0" name="Object">Puyo_DeathCollision</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="381700771521578" type="Puyo_DeathCollision">
+                            <param id="0" name="Pin to">Puyo_Blue</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="522769864096426">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="590513230988725" type="Puyo_Green" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="957964400753046" type="Puyo_Green">
+                            <param id="0" name="Object">Puyo_DeathCollision</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="439328359871370" type="Puyo_DeathCollision">
+                            <param id="0" name="Pin to">Puyo_Green</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="142727334078615">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="749535382747650" type="Puyo_Purple" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="875699610114626" type="Puyo_Purple">
+                            <param id="0" name="Object">Puyo_DeathCollision</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="444808222191179" type="Puyo_DeathCollision">
+                            <param id="0" name="Pin to">Puyo_Purple</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="826629988596571">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="416115223960163" type="Puyo_Red" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="235526103610529" type="Puyo_Red">
+                            <param id="0" name="Object">Puyo_DeathCollision</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="459135576451518" type="Puyo_DeathCollision">
+                            <param id="0" name="Pin to">Puyo_Red</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="440952446930988">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="229823035485345" type="Puyo_Yellow" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="160737559810862" type="Puyo_Yellow">
+                            <param id="0" name="Object">Puyo_DeathCollision</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="937325260094477" type="Puyo_DeathCollision">
+                            <param id="0" name="Pin to">Puyo_Yellow</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="954028466312795">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="705133222406730" type="Player">
+                            <param id="0" name="Object">Puyo_StartTrigger</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="361137478333978" type="Puyo_StartTrigger">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="927836329346648" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Red</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="140859512912386" type="Puyo_Door">
+                            <param id="0" name="X">9288</param>
+                            <param id="1" name="Y">976</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="487164386238492" type="Puyo_DropShadow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="851933807428552" type="Puyo_StartTrigger">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="272428095803559">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="534752026403311" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="829894622381614" type="Puyo_Spawner">
+                            <param id="0" name="Instance variable">IsDropping</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="439819296554953">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="656639265114932" type="Puyo_Blue">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="691614468821620" type="Puyo_Blue">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9312</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="763660695935837" type="Puyo_Blue">
+                                    <param id="0" name="X">Self.X-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="928377871613084">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="592091505201892" type="Puyo_Green">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="168380388516080" type="Puyo_Green">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9312</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="205703579199023" type="Puyo_Green">
+                                    <param id="0" name="X">Self.X-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="645167214156612">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="226874970829532" type="Puyo_Purple">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="554503910163762" type="Puyo_Purple">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9312</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="819713157984855" type="Puyo_Purple">
+                                    <param id="0" name="X">Self.X-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="483884618601179">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="629450557516938" type="Puyo_Red">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="911333716220826" type="Puyo_Red">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9312</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="450443054383323" type="Puyo_Red">
+                                    <param id="0" name="X">Self.X-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="825702849840578">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="348534422261439" type="Puyo_Yellow">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="263085257306018" type="Puyo_Yellow">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9312</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="665495330750791" type="Puyo_Yellow">
+                                    <param id="0" name="X">Self.X-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="844175135017247">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="747929034318643" type="Puyo_Spawner">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9312</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="320164364894775" type="Puyo_DropShadow">
+                                    <param id="0" name="X">Self.X-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="473720310707803">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="341110626974218" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="477642776325809" type="Puyo_Spawner">
+                            <param id="0" name="Instance variable">IsDropping</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="711693707019554">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="117874630759308" type="Puyo_Blue">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="658940187326481" type="Puyo_Blue">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9504</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="331019548958453" type="Puyo_Blue">
+                                    <param id="0" name="X">Self.X+32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="253823313263785">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="254282378342066" type="Puyo_Green">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="907220852677062" type="Puyo_Green">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9504</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="221153661751439" type="Puyo_Green">
+                                    <param id="0" name="X">Self.X+32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="275343385130152">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="323734576669571" type="Puyo_Purple">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="368776796423775" type="Puyo_Purple">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9504</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="154422980153761" type="Puyo_Purple">
+                                    <param id="0" name="X">Self.X+32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="217034713777135">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="933564175036646" type="Puyo_Red">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="238905507347998" type="Puyo_Red">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9504</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="337100236907362" type="Puyo_Red">
+                                    <param id="0" name="X">Self.X+32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="896136129200710">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="331625412640735" type="Puyo_Yellow">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="412990243664071" type="Puyo_Yellow">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9504</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="103082248401793" type="Puyo_Yellow">
+                                    <param id="0" name="X">Self.X+32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="116591099724449">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="609267271285745" type="Puyo_Spawner">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="X co-ordinate">9504</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="969212398567591" type="Puyo_DropShadow">
+                                    <param id="0" name="X">Self.X+32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="138909352082607">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="200965945062566" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="604850261369084">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="454540400785700" type="Puyo_Blue">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="594296075619864" type="Puyo_Blue">
+                                    <param id="0" name="Max fall speed">450</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="840775329212886" type="Puyo_Spawner">
+                                    <param id="0" name="Instance variable">IsDropping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="676398808320094">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="715298987993774" type="Puyo_Green">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="198888317724013" type="Puyo_Green">
+                                    <param id="0" name="Max fall speed">450</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="646778479931163" type="Puyo_Spawner">
+                                    <param id="0" name="Instance variable">IsDropping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="186473258700239">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="380348906482257" type="Puyo_Purple">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="710966916020425" type="Puyo_Purple">
+                                    <param id="0" name="Max fall speed">450</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="879748161235435" type="Puyo_Spawner">
+                                    <param id="0" name="Instance variable">IsDropping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="288980362570644">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="548113706932852" type="Puyo_Red">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="427877806624324" type="Puyo_Red">
+                                    <param id="0" name="Max fall speed">450</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="635460469438498" type="Puyo_Spawner">
+                                    <param id="0" name="Instance variable">IsDropping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="189244384795454">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="208837138161057" type="Puyo_Yellow">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="844356676703027" type="Puyo_Yellow">
+                                    <param id="0" name="Max fall speed">450</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="267355162199797" type="Puyo_Spawner">
+                                    <param id="0" name="Instance variable">IsDropping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="887570127999564">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="207323298816280" type="Puyo_Red" />
+                        <condition id="-7" name="Compare instance variable" sid="766845083992067" type="Puyo_Red">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="289445590829523" type="Puyo_Spawner">
+                            <param id="0" name="Instance variable">IsDropping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="595126935205593" type="Puyo_Red">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="901127436214690" type="Puyo_Red">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="289844242739978" type="Puyo_Red">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="299681563038719" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Yellow</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="572935129263009" type="Puyo_DeathCollision">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="468240446270670" type="Puyo_DropShadow">
+                            <param id="0" name="X">9376</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="885065609390938">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="675502969034054" type="Puyo_Blue" />
+                        <condition id="-7" name="Compare instance variable" sid="407957367980314" type="Puyo_Blue">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="124025365704745" type="Puyo_Spawner">
+                            <param id="0" name="Instance variable">IsDropping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="760596663409771" type="Puyo_Blue">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="596581263053247" type="Puyo_Blue">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="364679138897719" type="Puyo_Blue">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="814022250690666" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Green</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="943193537407284" type="Puyo_DeathCollision">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="294121333797607" type="Puyo_DropShadow">
+                            <param id="0" name="X">9376</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="679159862924825">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="316146853112074" type="Puyo_Purple" />
+                        <condition id="-7" name="Compare instance variable" sid="395882215264421" type="Puyo_Purple">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="873979080271437" type="Puyo_Spawner">
+                            <param id="0" name="Instance variable">IsDropping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="350235219744375" type="Puyo_Purple">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="706135399091910" type="Puyo_Purple">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="974868962540289" type="Puyo_Purple">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="851295573475365" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Red</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="569343224544141" type="Puyo_DeathCollision">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="289305865401501" type="Puyo_DropShadow">
+                            <param id="0" name="X">9376</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="720259489765358">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="444273060586489" type="Puyo_Green" />
+                        <condition id="-7" name="Compare instance variable" sid="211157641281083" type="Puyo_Green">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="972019069744101" type="Puyo_Spawner">
+                            <param id="0" name="Instance variable">IsDropping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="335961753009261" type="Puyo_Green">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="562202165989562" type="Puyo_Green">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="736596724796176" type="Puyo_Green">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="106473214333984" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Purple</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="847860926128751" type="Puyo_DeathCollision">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="792958568490163" type="Puyo_DropShadow">
+                            <param id="0" name="X">9376</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="881309508065693">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="258464507871545" type="Puyo_Yellow" />
+                        <condition id="-7" name="Compare instance variable" sid="227184764229935" type="Puyo_Yellow">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="899116070318344" type="Puyo_Spawner">
+                            <param id="0" name="Instance variable">IsDropping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="439880944192962" type="Puyo_Yellow">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="365288654485374" type="Puyo_Yellow">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="445822193205574" type="Puyo_Yellow">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="687450439338361" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Blue</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="555530012284872" type="Puyo_DeathCollision">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="427051107499808" type="Puyo_DropShadow">
+                            <param id="0" name="X">9376</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="491273291651035">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="415674334730439" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Red</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="455721723104684" type="Puyo_Red" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="620164228551367" type="Puyo_Spawner" />
+                    </actions>
+                </event-block>
+                <event-block sid="321170541267742">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="901184505916896" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Blue</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="507286292847606" type="Puyo_Blue" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="968802235679890" type="Puyo_Spawner" />
+                    </actions>
+                </event-block>
+                <event-block sid="952402889710079">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="546639367266810" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Green</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="832575735108123" type="Puyo_Green" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="486109531103977" type="Puyo_Spawner" />
+                    </actions>
+                </event-block>
+                <event-block sid="225567939091154">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="298327930498363" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Yellow</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="275461697433452" type="Puyo_Yellow" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="890272273472068" type="Puyo_Spawner" />
+                    </actions>
+                </event-block>
+                <event-block sid="834487637317752">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="167956675975812" type="Puyo_Spawner">
+                            <param id="0" name="Object">Puyo_Purple</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="633951373592441" type="Puyo_Purple" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="100000415141945" type="Puyo_Spawner" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="273529728871318" title="EPZBoss">
+            <sub-events>
+                <event-group description="" sid="457390412015898" title="ProjectileCollisions">
+                    <sub-events>
+                        <event-group description="" sid="102918990308718" title="Ball">
+                            <sub-events>
+                                <event-block sid="992838082856774">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="159142466823182" type="Player">
+                                            <param id="0" name="Object">EPZBoss_Ball</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="913619414860852" type="Player">
+                                            <param id="0" name="Instance variable">IsSpinning</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="756991962257239" type="Player">
+                                            <param id="0" name="Instance variable">IsRolling</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="282524098747353" type="Player">
+                                            <param id="0" name="Instance variable">IsSpindashing</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="294154907263366" type="Function">
+                                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="130800938928534" title="ElectricProjectile">
+                            <sub-events>
+                                <event-block sid="437599604457739">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="763539727508825" type="Player">
+                                            <param id="0" name="Object">EPZBoss_Projectile</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="276945891845654" type="Function">
+                                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-block sid="834188898309220">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="240350850831661" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="374916001061781" type="EPZBoss_PlasticShield">
+                            <param id="0" name="Pin to">Eggman</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="139649067638671" type="EPZBoss_Cannon">
+                            <param id="0" name="Pin to">EPZBoss_PlasticShield</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Start up</comment>
+                <event-block sid="392286346313584">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="400769794318569" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">11440</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="693633407442811" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="698269904915331" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="439823635772894" type="Audio" />
+                        <action id="-1" name="Set X" sid="478778356185541" type="Camera">
+                            <param id="0" name="X">11440</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="198211617414342" type="Camera">
+                            <param id="0" name="Y">64</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="688657879872305" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="537707710819520" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="472366449688766" type="Audio">
+                            <param id="0" name="Audio file">EggPlantBossMusic</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;eggplantbossmusic&quot;</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="631192704844992" type="BossWallCollison">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="447537343488190">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="673553399424351" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Rotate toward position" sid="137825719717989" type="EPZBoss_Cannon">
+                            <param id="0" name="Degrees">5</param>
+                            <param id="1" name="X">Player.X</param>
+                            <param id="2" name="Y">Player.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="853910764333474">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="609084016377694" type="Eggman">
+                                    <param id="0" name="Instance variable">StartUp</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="485426565597188" type="Eggman">
+                                    <param id="0" name="Y">Self.Y+0.8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="281850447955632">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="609577210796738" type="Eggman">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">80</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="844168224673748" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="839409424828925" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="477317962091171" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="308339869096054" type="Eggman">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine3" id="0" name="Set active" sid="474420089267031" type="Eggman">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268713417053639">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="247666306514059" type="Player">
+                            <param id="0" name="Object">Eggman</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="101538551350283" type="Eggman">
+                            <param id="0" name="Instance variable">IsGettingHit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="532481257318928" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="845519636007946">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="831563555242606" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="258790036508908" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="757024121852181" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="107022397147919" type="Player">
+                                    <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="868847881640916" type="Player">
+                                    <param id="0" name="Vector X">Player.SonicPhysics.VectorX*-1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="126436531342083" type="Eggman">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="508388365475699" type="Eggman">
+                                    <param id="0" name="Instance variable">IsGettingHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="869244650279692" type="Eggman">
+                                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="836699854310744" type="Audio">
+                                    <param id="0" name="Audio file">BossHit</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="873212079808004">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="858875709177002" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Eggman</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="540986189292611" type="Eggman">
+                            <param id="0" name="Instance variable">IsGettingHit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="772489720559912" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="311839021625911" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="744082130394749" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="126492505108926" type="Player">
+                            <param id="0" name="Vector Y">Player.SonicPhysics.VectorY*-1</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="133953663086557" type="Player">
+                            <param id="0" name="Vector X">Player.SonicPhysics.VectorX*-1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="407552759752622" type="Eggman">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="142136313653052" type="Eggman">
+                            <param id="0" name="Instance variable">IsGettingHit</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="913588265326064" type="Eggman">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="504275638930704" type="Audio">
+                            <param id="0" name="Audio file">BossHit</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="524673017881323">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="437150460285651" type="Eggman">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="756544857960926" type="Eggman">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="855485796946410" type="Eggman">
+                            <param id="0" name="Instance variable">IsGettingHit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Attacks</comment>
+                <event-block sid="583905103494547">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="449489903808213" type="System">
+                            <param id="0" name="Interval (seconds)">2.0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="856138229049711" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="183413391364725" type="EPZBoss_PlasticShield">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="958136385069297" type="EPZBoss_Cannon">
+                            <param id="0" name="Object">EPZBoss_Ball</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="434726805098380" type="Audio">
+                            <param id="0" name="Audio file">BossShoot</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="325639177941345">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="558155405564997" type="EPZBoss_Ball" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="753205950393385" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="960986028851379" type="EPZBoss_Ball">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet2" id="5" name="Set enabled" sid="122392383085850" type="EPZBoss_Ball">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="188664272193523">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="847617583529889" type="Player">
+                            <param id="0" name="Object">EPZBoss_Ball</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="816403041957522">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="218641693579512" type="Player">
+                                    <param id="0" name="Instance variable">IsSpinning</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="265355293981785" type="Player">
+                                    <param id="0" name="Instance variable">IsRolling</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="352871649128681" type="Audio">
+                                    <param id="0" name="Audio file">BossExplosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action behavior="Bullet" id="4" name="Bounce off object" sid="512372729659578" type="EPZBoss_Ball">
+                                    <param id="0" name="Object">Player</param>
+                                </action>
+                                <action behavior="Bullet2" id="4" name="Bounce off object" sid="226532974017524" type="EPZBoss_Ball">
+                                    <param id="0" name="Object">Player</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="649648548844762">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="929402406304932" type="System">
+                            <param id="0" name="Interval (seconds)">3.0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="517142941467660" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="271947866987541" type="EPZBoss_ProjectileSpawn">
+                            <param id="0" name="Instance variable">Type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="857332098417360" type="Eggman">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="686725766201767" type="EPZBoss_ProjectileSpawn">
+                            <param id="0" name="Object">EPZBoss_Projectile</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="148248841238139" type="EPZBoss_Projectile">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="704201197749894" type="Audio">
+                            <param id="0" name="Audio file">Laser</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="144403627842594">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="663650966598937" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="411027774350062" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="645350574213883" type="EPZBoss_ProjectileSpawn">
+                            <param id="0" name="Instance variable">Type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="501219070441693" type="Eggman">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="747916881453327" type="Eggman">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="540557151795372" type="EPZBoss_ProjectileSpawn">
+                            <param id="0" name="Object">EPZBoss_Projectile</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="918971379640030" type="EPZBoss_Projectile">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="665823704737502" type="Audio">
+                            <param id="0" name="Audio file">Laser</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803976427225250">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="365877273781321" type="System">
+                            <param id="0" name="Interval (seconds)">3.0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="948743576779821" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="811314249129384" type="EPZBoss_ProjectileSpawn">
+                            <param id="0" name="Instance variable">Type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="303348690754483" type="Eggman">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="570962124603375" type="EPZBoss_ProjectileSpawn">
+                            <param id="0" name="Object">EPZBoss_Projectile</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Sine3" id="0" name="Set active" sid="230776032337390" type="EPZBoss_Projectile">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="580819247566288">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="706352656169117" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="734386683964151" type="Eggman">
+                            <param id="0" name="Instance variable">StartUp</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="123233908211548" type="EPZBoss_ProjectileSpawn">
+                            <param id="0" name="Instance variable">Type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="228820302829908" type="Eggman">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="116374805855570" type="Eggman">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="405675279852990" type="EPZBoss_ProjectileSpawn">
+                            <param id="0" name="Object">EPZBoss_Projectile</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Sine3" id="0" name="Set active" sid="240638779133154" type="EPZBoss_Projectile">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Less health</comment>
+                <event-block sid="945038335508973">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="229883195906488" type="Eggman">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="241574463117252" type="EPZBoss_PlasticShield">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="666068861396397" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="666618172944457" type="EPZBoss_PlasticShield">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="907698472483636" type="EPZBoss_PlasticShield" />
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="383463623839593" type="EPZBoss_Projectile">
+                            <param id="0" name="Magnitude">1000</param>
+                        </action>
+                        <action behavior="Sine2" id="2" name="Set magnitude" sid="727931667140230" type="EPZBoss_Projectile">
+                            <param id="0" name="Magnitude">-512</param>
+                        </action>
+                        <action behavior="Sine3" id="2" name="Set magnitude" sid="701383637141909" type="EPZBoss_Projectile">
+                            <param id="0" name="Magnitude">1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566131561020190">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="796228380546163" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="262286261108893" type="EPZBoss_PlasticShield">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="401796086835006" type="EPZBoss_PlasticShield">
+                            <param id="0" name="Y">Self.Y+3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Death</comment>
+                <event-block sid="186446108210659">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="579421991550023" type="EPZBoss_Projectile" />
+                        <condition id="-7" name="Compare instance variable" sid="367827827897702" type="Eggman">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="744308576689104" type="EPZBoss_Projectile" />
+                    </actions>
+                </event-block>
+                <event-block sid="990230390316492">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="391187052679975" type="Eggman">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="949733618740872" type="Eggman">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="844019718230545" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="713646407215694" type="Eggman">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="247077154694626" type="Eggman">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="736785682178398" type="Eggman">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine3" id="0" name="Set active" sid="333476733553202" type="Eggman">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="674625428376282" type="Eggman">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="203578655803585">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="442243159278037" type="System">
+                                    <param id="0" name="Count">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="769677069121549" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="730799882315997" type="Eggman">
+                                    <param id="0" name="Object">Explosion</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="529567398497678" type="Audio">
+                                    <param id="0" name="Audio file">BossExplosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="109650444822802" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="933929364373706" type="Eggman">
+                                    <param id="0" name="Object">Explosion</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="617643351718224" type="Audio">
+                                    <param id="0" name="Audio file">BossExplosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="989589981899202" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="308261411013837" type="Eggman">
+                                    <param id="0" name="Object">Explosion</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">3</param>
+                                </action>
+                                <action id="0" name="Play" sid="639141742479645" type="Audio">
+                                    <param id="0" name="Audio file">BossExplosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="738286909738831" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="478105530305063" type="Eggman">
+                                    <param id="0" name="Object">Explosion</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">4</param>
+                                </action>
+                                <action id="0" name="Play" sid="724343075913470" type="Audio">
+                                    <param id="0" name="Audio file">BossExplosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="833388178480204" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="340077622059653" type="Eggman">
+                                    <param id="0" name="Object">Explosion</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">5</param>
+                                </action>
+                                <action id="0" name="Play" sid="525265767412448" type="Audio">
+                                    <param id="0" name="Audio file">BossExplosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="354528690754425">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="424741244520696" type="System">
+                                    <param id="0" name="Variable">Checkpoint_Active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="629601643081213" type="System">
+                                    <param id="0" name="Variable">Checkpoint_SavedRings</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="498482455181083" type="System">
+                                    <param id="0" name="Variable">Checkpoint_SavedTime_Minutes</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="311329100800366" type="System">
+                                    <param id="0" name="Variable">Checkpoint_SavedTime_Seconds</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="523874868828407" type="System">
+                                    <param id="0" name="Variable">Checkpoint_SavedXPosition</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="829692178807963" type="System">
+                                    <param id="0" name="Variable">Checkpoint_SavedYPosition</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="592164274802910" type="System">
+                                    <param id="0" name="Variable">Checkpoint_SavedTime</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="314207842950152" type="System">
+                                    <param id="0" name="Seconds">3.0</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="665452290183946" type="WhiteFadeout">
+                                    <param id="0" name="Fade-in time">1</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="323760536291395" type="WhiteFadeout">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="754800484616220" type="WhiteFadeout" />
+                                <action id="-16" name="Wait" sid="642842249032166" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="147897622266572" type="BlackFadeout">
+                                    <param id="0" name="Fade-in time">0.5</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="584585479175294" type="BlackFadeout">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="891847570915564" type="BlackFadeout" />
+                                <action id="-16" name="Wait" sid="754143155615089" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="149536584123300" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="460419721963956" type="System">
+                                    <param id="0" name="Layout">HotForestZone1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

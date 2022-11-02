@@ -1,0 +1,1053 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BasicControlEvents</name>
+    <events>
+        <include>DebugEvents</include>
+        <include>MiscObjectEvents</include>
+        <include>RingsEvents</include>
+        <include>SonicAnimations</include>
+        <variable constant="0" name="ZoneID" sid="442954305043305" static="0" type="number">0</variable>
+        <event-group description="" sid="649650622719946" title="MusicReplay">
+            <sub-events>
+                <comment>Extra life music replay events</comment>
+                <comment>Make sure to have the tag for a short song (such as the 1Up theme, inviniciblity, or the drowning theme)</comment>
+                <event-block sid="854826838434114">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="998231269737286" type="Audio">
+                            <param id="0" name="Tag">&quot;MusicReplay&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="931335144315447">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="632066308963060" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="369532482918581" type="Audio">
+                                    <param id="0" name="Audio file">testzoneact1</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;testzoneact1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="688329414184891">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="806564161964237" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="124123778750321" type="Audio">
+                                    <param id="0" name="Audio file">testzoneact2</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;testzoneact2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="926003519560078">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="493052186720456" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1.1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="994634856098979">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="638708099540447" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="670672262011538" type="Audio">
+                                            <param id="0" name="Audio file">EggPlant1Music (Metropolis Street Racer - Am I Only Dreaming)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;eggplant1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="682794812487688">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="379201540804001" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="940260483399272" type="Audio">
+                                            <param id="0" name="Audio file">EggPlantBeta1 (Sonic CD US - Wacky Workbench Present SMPS remix by A-S-H)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;eggplant1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="626342404327128">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="740583653700940" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2.1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="756756443729672">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="570105906713753" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="754519333907481" type="Audio">
+                                            <param id="0" name="Audio file">HotForest1Music (Daytona USA Saturn - Pounding Pavement)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;hotforest1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="883331795208199">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="459542199961358" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="370528506686121" type="Audio">
+                                            <param id="0" name="Audio file">HotForestBeta1 (Shantae Half Genie Hero - Counterfiet Mermaids SMPS By Crash)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;hotforest1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="661276443540121">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="569458678277793" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3.1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="779557651460028">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="610028483863113" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="810902736641615" type="Audio">
+                                            <param id="0" name="Audio file">BrightParadise1Music (TMNT 1990 Movie - 9.95)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;brightparadise1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="328206227524284">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="620412360185717" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="409809711545227" type="Audio">
+                                            <param id="0" name="Audio file">BrightParadiseBeta1 (Love Live! School Idol Project - Snow Halation SMPS remix by Joenick)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;brightparadise1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="745535283535445">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="190232385716824" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">11.1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="423943772126677">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="689395714063873" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="631659859153048" type="Audio">
+                                            <param id="0" name="Audio file">UnlimitedTreesZone (19.5 - Buken &amp; The Peshay</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;unlimitedtrees&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="359484490163803">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="945632500139231" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="339767342148259" type="Audio">
+                                            <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by A-S-H)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;unlimitedtrees&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="309903382909875">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="884215596919555" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">12.1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="395323352466250">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="378553862618568" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="778890016208677" type="Audio">
+                                            <param id="0" name="Audio file">WarehouseZone (Jumping Flash! World 6-1)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;warehousezone&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="735511731212483">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="814887033481112" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="842808105957253" type="Audio">
+                                            <param id="0" name="Audio file">WarehouseZone (Jumping Flash! World 6-1)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;warehousezone&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="101643718742799">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="378185884970909" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">13.1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="844098251606861">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="655826579969262" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="293702650117215" type="Audio">
+                                            <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by Joenick)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;greenhillzone&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="921217837705448">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="410445960649490" type="System">
+                                            <param id="0" name="Variable">MusicPlaylist</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="206099823747774" type="Audio">
+                                            <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by A-S-H)</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;greenhillzone&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="631628124606284" title="Camera">
+            <sub-events>
+                <comment>Normal X Camera speed (when player isn&apos;t going fast)</comment>
+                <event-block sid="414326193344943">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="900382005687157" type="System" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="557752703035956" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Speed">410</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="591345944549100" type="PlayerMask_Sonic" />
+                        <condition id="-7" name="Compare instance variable" sid="504127141081012" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="785776079334747" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="749156864247225" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Player.X, 0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="939921133036871">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="737469247085804" type="System" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="227389737474702" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Speed">-410</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="816034753725779" type="PlayerMask_Sonic" />
+                        <condition id="-7" name="Compare instance variable" sid="448695072594401" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="432526478467242" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="284967719507828" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Player.X, 0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Slow Camera Speed 1</comment>
+                <event-block sid="396610617436944">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="811494034115876" type="System" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="112429471730832" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Speed">410</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="856512708748998" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Speed">800</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="903413837676743" type="PlayerMask_Sonic" />
+                        <condition id="-7" name="Compare instance variable" sid="536005420020215" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="111906849509243" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="882583352424749" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Player.X, 0.3)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="648204990657993">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="632085594950490" type="System" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="488620560701045" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Speed">-410</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="497573494842829" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Speed">-800</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="144667742353733" type="PlayerMask_Sonic" />
+                        <condition id="-7" name="Compare instance variable" sid="967021115011096" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="919619741121616" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="490415566871031" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Player.X, 0.3)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Slow camera speed 2</comment>
+                <event-block sid="875799293728400">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="832189745179881" type="System" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="525757759358458" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Speed">800</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="430840634044158" type="PlayerMask_Sonic" />
+                        <condition id="-7" name="Compare instance variable" sid="864508785286270" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="216387498464774" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="326021204526374" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Player.X, 0.1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="810854544288404">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="257510473884849" type="System" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="245858192953907" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Speed">-800</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="565147212235448" type="PlayerMask_Sonic" />
+                        <condition id="-7" name="Compare instance variable" sid="152338685562275" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="201310049860506" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="458103705465932" type="Camera">
+                            <param id="0" name="X">lerp(Self.X, Player.X, 0.1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Y camera speed</comment>
+                <event-block sid="925053272044061">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="804697296346582" type="System" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="724928206245546" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Speed">500</param>
+                            <param id="2" name="Vector">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="799567973345459" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="597987693938247" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="940035284873591" type="Camera">
+                            <param id="0" name="Y">lerp(Self.Y, Player.Y, 0.2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="858629479219761">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="907708554071244" type="System" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="667706779648897" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Speed">500</param>
+                            <param id="2" name="Vector">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="174680210541388" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="615354237631276" type="Camera">
+                            <param id="0" name="Instance variable">Disabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="596289803952236" type="Camera">
+                            <param id="0" name="Y">lerp(Self.Y, Player.Y, 0.1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="The basic controls (left and right aboutt this and jumping)" sid="321777014515219" title="BasicControls">
+            <sub-events>
+                <event-block sid="300364063535167">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="921105376294040" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="812505953712310" type="PlayerMask_Sonic">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y-8</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="654302937711450" type="ShieldMasks">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="825025984046803">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="140132300461089" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="793460062520016" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="664763021566926" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="SonicPhysics" id="10" name="Simulate control" sid="294284691622139" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="536439611258823" type="PlayerMask_Sonic">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="934112441294088">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="133453116175076" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="402184522122389" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="715059089127553" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="SonicPhysics" id="10" name="Simulate control" sid="596549139321809" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="165437044505984" type="PlayerMask_Sonic">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="328187626779793">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="963964437863950" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="370783404089138" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="843743266661873" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="758592296879452" type="Player" />
+                        <condition behavior="SonicPhysics" id="12" inverted="1" name="Is rolling" sid="377016707594806" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action behavior="SonicPhysics" id="10" name="Simulate control" sid="632311250081137" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="450618088066001" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="703886179781287" type="PlayerMask_Sonic">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="145895630334695" type="Audio">
+                            <param id="0" name="Audio file">Spin</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="635929433902151">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="342478702282842" type="Keyboard">
+                            <param id="0" name="Key">74</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="332222708112121" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="646711535356578" type="ShieldMasks">
+                            <param id="0" name="Instance variable">IsDoubleJumping</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="451471123192265" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="SonicPhysics" id="10" name="Simulate control" sid="102270666184064" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="627519553432499">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="165097247046118" type="Keyboard">
+                            <param id="0" name="Key">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="530361805053721" type="Audio">
+                            <param id="0" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="492563324597209">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="626851518881905" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="0" inverted="1" name="Is moving" sid="378976868669867" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="118141392628255" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;LookUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="363788648854108">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="504101351224841" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="0" inverted="1" name="Is moving" sid="180298836542153" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="730159441653270" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="464573134525995" title="HardRoll">
+            <sub-events>
+                <event-block sid="370798218909586">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="360616154218674" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="879034095506116" type="Sonic_HardRollSprite">
+                            <param id="0" name="X">PlayerMask_Sonic.X</param>
+                            <param id="1" name="Y">PlayerMask_Sonic.Y+16</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="940363847097522">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="258667931988299" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="931487899638352" type="Sonic_HardRollSprite">
+                            <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="493725533866923">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="571839143810693" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="203819463253294" type="Sonic_HardRollSprite">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="159075584261762">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="744576239927212" type="Keyboard">
+                            <param id="0" name="Key">75</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="216045482168123" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="207709469993257" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="717607834731684" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="389274377070059" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="322339530467278" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="208772618026242" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="104162348603551" type="PlayerMask_Sonic">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="885051644505762" type="Audio">
+                            <param id="0" name="Audio file">Spin</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="16" name="Trigger roll" sid="345405143492105" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="174615531983963">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="572102095897394" type="Keyboard">
+                            <param id="0" name="Key">75</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="264584246878810" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="686539855173973" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="880030635942260" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="429527567051044" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="208189116781910" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="802279166313645" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="16" name="Trigger roll" sid="724525462514052" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="504061367370613" title="Spindash">
+            <sub-events>
+                <comment>Crouching</comment>
+                <event-block sid="550428620850924">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="814453564864650" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="0" inverted="1" name="Is moving" sid="834876163452678" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="569826751840685" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="470156545257778" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Crouch&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="398605682576377" type="Player">
+                            <param id="0" name="Instance variable">IsCrouching</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="853015084937462">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="862176109908899" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="0" inverted="1" name="Is moving" sid="862761438633799" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="853316494104236" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="883429720451666" type="Player">
+                            <param id="0" name="Instance variable">IsCrouching</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="506069971462557">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="820907087854329" type="Keyboard">
+                            <param id="0" name="Key">74</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="139616959487734" type="Player">
+                            <param id="0" name="Instance variable">IsCrouching</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="589021897048934" type="System">
+                            <param id="0" name="Variable">SpindashDisabled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="752165049393760" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="360751512608611" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Spindash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="715798722265619" type="PlayerMask_Sonic">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="575430731467907" type="Audio">
+                            <param id="0" name="Audio file">Spindash_Charge</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="359845598013918">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="678040268799121" type="Player">
+                                    <param id="0" name="Instance variable">SpindashPower</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">800</param>
+                                </condition>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="734664630726695" type="PlayerMask_Sonic" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="876030751584278" type="Player">
+                                    <param id="0" name="Instance variable">SpindashPower</param>
+                                    <param id="1" name="Value">200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="659043603727481">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="306609757230586" type="Player">
+                                    <param id="0" name="Instance variable">SpindashPower</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">-800</param>
+                                </condition>
+                                <condition id="7" name="Is mirrored" sid="960220893354391" type="PlayerMask_Sonic" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="279899390443880" type="Player">
+                                    <param id="0" name="Instance variable">SpindashPower</param>
+                                    <param id="1" name="Value">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="789592863368810">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="541536898730932" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="952939240023562">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="567587588980938" type="Player">
+                                    <param id="0" name="Instance variable">SpindashPower</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">400</param>
+                                </condition>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="867743891058550" type="PlayerMask_Sonic" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="459699219062830" type="Player">
+                                    <param id="0" name="Instance variable">SpindashPower</param>
+                                    <param id="1" name="Value">200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="186994050935870">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="230641300243828" type="Player">
+                                    <param id="0" name="Instance variable">SpindashPower</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">-400</param>
+                                </condition>
+                                <condition id="7" name="Is mirrored" sid="266882028624526" type="PlayerMask_Sonic" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="595101353732285" type="Player">
+                                    <param id="0" name="Instance variable">SpindashPower</param>
+                                    <param id="1" name="Value">200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="763994406301885">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="221437699624865" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="934594771349433" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="144473415132479" type="Player">
+                            <param id="0" name="Vector X">Player.SpindashPower</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="216065344311590" type="Player">
+                            <param id="0" name="Instance variable">IsCrouching</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="201422412953304" type="Player">
+                            <param id="0" name="Instance variable">IsSpindashing</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="10" name="Simulate control" sid="675503305077836" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="460849568764045" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="947649213155123" type="Player">
+                            <param id="0" name="Instance variable">SpindashPower</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="712172567369954" type="Audio">
+                            <param id="0" name="Audio file">Dash</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

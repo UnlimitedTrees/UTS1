@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Menu_StageSelect</layout>
+        <layout order="4">MarbleZone1</layout>
+        <layout order="5">TestZone1</layout>
+        <layout order="11">ControlsSplashScreen</layout>
+        <layout order="13">MainMenu</layout>
+        <layout order="14">OptionsMenu</layout>
+        <layout order="16">TitleScreen</layout>
+        <layout active="1" order="18">BUYSONICMANIA</layout>
+        <layout order="20">EggPlantZone1</layout>
+        <layout order="23">HotForestZone1</layout>
+        <layout order="29">BrightParadiseZone1</layout>
+        <layout order="33">UnlimitedTreesZone</layout>
+        <layout order="34">WarehouseZone</layout>
+        <layout order="36">ExtrasMenu</layout>
+        <layout order="39">Extras_SpecialSelect</layout>
+        <layout order="40">CreditsSplashScreen</layout>
+        <layout order="42">GreenHillZone</layout>
+        <layout order="44">HistoryMenu</layout>
+        <layout order="46">TestZone2</layout>
+        <event-sheet order="1">BadnikEvents</event-sheet>
+        <event-sheet order="2">TitleCardEvents</event-sheet>
+        <event-sheet order="3">TestZone2Events</event-sheet>
+        <event-sheet order="6">TestZone1Events</event-sheet>
+        <event-sheet order="7">SonicAnimations</event-sheet>
+        <event-sheet order="8">Particles</event-sheet>
+        <event-sheet order="9">CreditsSplashScreenEvents</event-sheet>
+        <event-sheet order="10">StageSelectEvents</event-sheet>
+        <event-sheet order="12">MainMenuEvents</event-sheet>
+        <event-sheet order="15">DebugEvents</event-sheet>
+        <event-sheet order="17">TitleScreenEvents</event-sheet>
+        <event-sheet order="19">ReadSSRGSplashEvents</event-sheet>
+        <event-sheet order="21">BasicControlEvents</event-sheet>
+        <event-sheet order="22">CheckpointEvent</event-sheet>
+        <event-sheet order="24">MarbleZone1Events</event-sheet>
+        <event-sheet order="25">EggPlantZone1Events</event-sheet>
+        <event-sheet order="26">MiscObjectEvents</event-sheet>
+        <event-sheet order="27">RingsEvents</event-sheet>
+        <event-sheet order="28">HotForestZone1Events</event-sheet>
+        <event-sheet order="30">BrightParadiseZone1Events</event-sheet>
+        <event-sheet order="31">CollisionEvents</event-sheet>
+        <event-sheet order="32">OptionsMenuEvents</event-sheet>
+        <event-sheet order="35">WarehouseZoneEvents</event-sheet>
+        <event-sheet order="37">ExtrasMenuEvents</event-sheet>
+        <event-sheet order="38">SpecialSelectEvents</event-sheet>
+        <event-sheet order="41">ControlsSplashScreenEvents</event-sheet>
+        <event-sheet order="43">GreenHillZoneEvents</event-sheet>
+        <event-sheet order="45">HistoryMenuEvents</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/BackgroundObjects/" />
+        <folder expanded="1" path="object-folder/Collisions/" />
+        <folder expanded="1" path="object-folder/Collisions/Path1/" />
+        <folder expanded="1" path="object-folder/Collisions/Path2/" />
+        <folder expanded="1" path="object-folder/PlayerObjects/" />
+        <folder expanded="0" path="object-folder/HUDObjects/" />
+        <folder expanded="1" path="object-folder/HUDObjects/TitleCard/" />
+        <folder expanded="1" path="object-folder/GameplayObjects/" />
+        <folder expanded="1" path="object-folder/GameplayObjects/Badniks/" />
+        <folder expanded="1" path="object-folder/GameplayObjects/ParticleEffects/" />
+        <folder expanded="1" path="object-folder/MenuObjects/" />
+        <folder expanded="1" path="object-folder/MenuObjects/FileSelectMenuAssets/" />
+        <folder expanded="1" path="object-folder/MenuObjects/TitleScreenAssets/" />
+        <folder expanded="1" path="object-folder/MenuObjects/TitleScreenAssets/BG/" />
+        <folder expanded="1" path="object-folder/MenuObjects/TitleScreenAssets/BG/Water/" />
+        <folder expanded="1" path="object-folder/MenuObjects/HistoryMenu/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MarbleZone/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MarbleZone/GameplayObjects/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MainGame/HotForestZone/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MainGame/HotForestZone/BG/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/HotForestZone/GameplayObjects/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/HotForestZone/GameplayObjects/PacManSection/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/HotForestZone/GameplayObjects/PacManSection/GhostObjects/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/HotForestZone/HFZBossObjects/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/EggPlantZone/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MainGame/EggPlantZone/BG/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MainGame/EggPlantZone/BG/Water1/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/EggPlantZone/BG/Water2/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MainGame/EggPlantZone/GameplayObjects/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/EggPlantZone/GameplayObjects/Puyos/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/EggPlantZone/EPZBossObjects/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/BrightParadiseZone/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MainGame/BrightParadiseZone/BG/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MainGame/BrightParadiseZone/BG/Water/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/BrightParadiseZone/GameplayObjects/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/BrightParadiseZone/PortalSection/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/MainGame/BrightParadiseZone/BPZBossObjects/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/MainGame/BrightParadiseZone/BPZBossObjects/FallingBGSprites/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/ExtraZones/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/ExtraZones/UnlimitedTreesZone/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/ExtraZones/WarehouseZone/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/ExtraZones/WarehouseZone/BG/" />
+        <folder expanded="1" path="object-folder/ZoneAssets/ExtraZones/GreenHillZone/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/ExtraZones/GreenHillZone/BG/" />
+        <folder expanded="0" path="object-folder/ZoneAssets/ExtraZones/GreenHillZone/BG/Water/" />
+        <folder expanded="1" path="object-folder/DebugObjects/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/Menus/" />
+        <folder expanded="1" path="layout-folder/Zones/" />
+        <folder expanded="1" path="layout-folder/Zones/MainGame/" />
+        <folder expanded="1" path="layout-folder/Zones/ExtraZones/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/LevelEvents/" />
+        <folder expanded="1" path="event-folder/LevelEvents/MainGame/" />
+        <folder expanded="1" path="event-folder/LevelEvents/ExtraZones/" />
+        <folder expanded="1" path="event-folder/PlayerControls/" />
+        <folder expanded="1" path="event-folder/CharacterAnimations/" />
+        <folder expanded="1" path="event-folder/ObjectEvents/" />
+        <folder expanded="1" path="event-folder/MenuEvents/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="sound-folder/HFZ1Sounds/" />
+        <folder expanded="1" path="music-folder/SAGE2017ost/ZoneMusic/" />
+        <folder expanded="1" path="music-folder/SAGE2017ost/MenuMusic/" />
+        <folder expanded="1" path="music-folder/SAGE2017ost/BossMusic/" />
+        <folder expanded="1" path="music-folder/BetaOst/ZoneMusic/" />
+        <folder expanded="1" path="music-folder/BetaOst/MenuMusic/" />
+        <folder expanded="1" path="music-folder/SAGE2017ost/" />
+        <folder expanded="1" path="music-folder/BetaOst/" />
+        <folder expanded="1" path="animation-folder/Block_Path1/" />
+        <folder expanded="1" path="animation-folder/SmallSlope1_Path1/" />
+        <folder expanded="1" path="animation-folder/SmallBlock_Path1/" />
+        <folder expanded="1" path="animation-folder/SmallSlope2_Path1/" />
+        <folder expanded="1" path="animation-folder/SmallSlope3_Path1/" />
+        <folder expanded="1" path="animation-folder/SmallSlope4_Path1/" />
+        <folder expanded="1" path="animation-folder/Slope1_Path1/" />
+        <folder expanded="1" path="animation-folder/Slope2_Path1/" />
+        <folder expanded="1" path="animation-folder/Ramp1_Path1/" />
+        <folder expanded="1" path="animation-folder/Ramp2_Path1/" />
+        <folder expanded="1" path="animation-folder/Ramp3_Path1/" />
+        <folder expanded="1" path="animation-folder/Ramp4_Path1/" />
+        <folder expanded="1" path="animation-folder/Ramp5_Path1/" />
+        <folder expanded="1" path="animation-folder/Ramp6_Path1/" />
+        <folder expanded="1" path="animation-folder/Ramp7_Path1/" />
+        <folder expanded="1" path="animation-folder/Collision_Path1/" />
+        <folder expanded="1" path="animation-folder/Block2_Path1/" />
+        <folder expanded="1" path="animation-folder/Ramp_Path1/" />
+        <folder expanded="1" path="animation-folder/SteepSlope_Path1/" />
+        <folder expanded="1" path="animation-folder/EPZCollision1/" />
+        <folder expanded="1" path="animation-folder/EPZCollison2/" />
+        <folder expanded="1" path="animation-folder/EPZCollision3/" />
+        <folder expanded="1" path="animation-folder/HFZCollision1/" />
+        <folder expanded="1" path="animation-folder/HFZCollision2/" />
+        <folder expanded="1" path="animation-folder/HFZCollision3/" />
+        <folder expanded="1" path="animation-folder/WZCollison1/" />
+        <folder expanded="1" path="animation-folder/GHZCollision1/" />
+        <folder expanded="1" path="animation-folder/Block_Path2/" />
+        <folder expanded="1" path="animation-folder/Ramp1_Path2/" />
+        <folder expanded="1" path="animation-folder/Ramp2_Path2/" />
+        <folder expanded="1" path="animation-folder/Ramp3_Path2/" />
+        <folder expanded="1" path="animation-folder/Ramp4_Path2/" />
+        <folder expanded="1" path="animation-folder/Ramp5_Path2/" />
+        <folder expanded="1" path="animation-folder/Ramp6_Path2/" />
+        <folder expanded="1" path="animation-folder/Ramp7_Path2/" />
+        <folder expanded="1" path="animation-folder/SmallBlock_Path2/" />
+        <folder expanded="1" path="animation-folder/Ramp_Path2/" />
+        <folder expanded="1" path="animation-folder/EPZCollision3_Path2/" />
+        <folder expanded="1" path="animation-folder/JumpThroughPlatform/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/PlayerMask_Sonic/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/ShieldMasks/" />
+        <folder expanded="1" path="animation-folder/InvinciblityParticle/" />
+        <folder expanded="1" path="animation-folder/DrowningNumber/" />
+        <folder expanded="1" path="animation-folder/BossWallCollison/" />
+        <folder expanded="1" path="animation-folder/Sonic_HardRollSprite/" />
+        <folder expanded="1" path="animation-folder/BlackFadeout/" />
+        <folder expanded="1" path="animation-folder/TitleCard_SonicText/" />
+        <folder expanded="1" path="animation-folder/TitleCard_ActNumber/" />
+        <folder expanded="1" path="animation-folder/WhiteFadeout/" />
+        <folder expanded="1" path="animation-folder/HUD/" />
+        <folder expanded="1" path="animation-folder/HUD_LifeCounter/" />
+        <folder expanded="1" path="animation-folder/HUD_EndCard/" />
+        <folder expanded="1" path="animation-folder/Motobug/" />
+        <folder expanded="1" path="animation-folder/Jaws/" />
+        <folder expanded="1" path="animation-folder/Yadrin/" />
+        <folder expanded="1" path="animation-folder/Yadrin_SpikeHitbox/" />
+        <folder expanded="1" path="animation-folder/Batbrain/" />
+        <folder expanded="1" path="animation-folder/Splats/" />
+        <folder expanded="1" path="animation-folder/Frogger/" />
+        <folder expanded="1" path="animation-folder/Caterkiller/" />
+        <folder expanded="1" path="animation-folder/Caterkiller_MovementChanger/" />
+        <folder expanded="1" path="animation-folder/MiniEggmech/" />
+        <folder expanded="1" path="animation-folder/BPZ_TimeVortexBadnik/" />
+        <folder expanded="1" path="animation-folder/Explosion/" />
+        <folder expanded="1" path="animation-folder/Motobug_DustParticle/" />
+        <folder expanded="1" path="animation-folder/Points/" />
+        <folder expanded="1" path="animation-folder/Flicky/" />
+        <folder expanded="1" path="animation-folder/Monitor_PopUp/" />
+        <folder expanded="1" path="animation-folder/WidescreenTV_Particle/" />
+        <folder expanded="1" path="animation-folder/Ring/" />
+        <folder expanded="1" path="animation-folder/Spring/" />
+        <folder expanded="1" path="animation-folder/Spring_Activator/" />
+        <folder expanded="1" path="animation-folder/Monitor/" />
+        <folder expanded="1" path="animation-folder/MovingPlatform/" />
+        <folder expanded="1" path="animation-folder/Bumper/" />
+        <folder expanded="1" path="animation-folder/CNZscorethings/" />
+        <folder expanded="1" path="animation-folder/Spikes/" />
+        <folder expanded="1" path="animation-folder/SpikeHitbox/" />
+        <folder expanded="1" path="animation-folder/Balloon/" />
+        <folder expanded="1" path="animation-folder/Boostpad/" />
+        <folder expanded="1" path="animation-folder/EndPost/" />
+        <folder expanded="1" path="animation-folder/Water_AnimatedArea/" />
+        <folder expanded="1" path="animation-folder/BubbleSpawner/" />
+        <folder expanded="1" path="animation-folder/Bubble/" />
+        <folder expanded="1" path="animation-folder/PushableBlock/" />
+        <folder expanded="1" path="animation-folder/PushableBlock_leftsensor/" />
+        <folder expanded="1" path="animation-folder/PushableBlock_rightsensor/" />
+        <folder expanded="1" path="animation-folder/PushableBlock_bottomsensor/" />
+        <folder expanded="1" path="animation-folder/MovingBlocks/" />
+        <folder expanded="1" path="animation-folder/EndTitleCardBlock/" />
+        <folder expanded="1" path="animation-folder/Checkpoint/" />
+        <folder expanded="1" path="animation-folder/Ring_Bounce/" />
+        <folder expanded="1" path="animation-folder/Pipe_Entry/" />
+        <folder expanded="1" path="animation-folder/Pipe_DirectionChanger/" />
+        <folder expanded="1" path="animation-folder/Pipe_DirectionChoice/" />
+        <folder expanded="1" path="animation-folder/EndTitleCardBlock2/" />
+        <folder expanded="1" path="animation-folder/WideScreenMonitor/" />
+        <folder expanded="1" path="animation-folder/RedRing_Bounce/" />
+        <folder expanded="1" path="animation-folder/1UpCoin/" />
+        <folder expanded="1" path="animation-folder/SelectedSlot/" />
+        <folder expanded="1" path="animation-folder/MenuSlot/" />
+        <folder expanded="1" path="animation-folder/MenuSlot/ZoneSlots/" />
+        <folder expanded="1" path="animation-folder/MenuSlot/MainMenuSlots/" />
+        <folder expanded="1" path="animation-folder/MenuSlot/ExtrasMenu/" />
+        <folder expanded="1" path="animation-folder/MenuSlot/ExtrasMenu/SpecialZones/" />
+        <folder expanded="1" path="animation-folder/MenuSlot/SoundOptionSlots/" />
+        <folder expanded="1" path="animation-folder/ExtraMenuCredits/" />
+        <folder expanded="1" path="animation-folder/TitleScreenEmblem/" />
+        <folder expanded="1" path="animation-folder/TitleScreen_Sonic/" />
+        <folder expanded="1" path="animation-folder/TitleScreen_UTText/" />
+        <folder expanded="1" path="animation-folder/TitleScreenEmblem_Overlay/" />
+        <folder expanded="1" path="animation-folder/HistoryPages/" />
+        <folder expanded="1" path="animation-folder/ControlsSplashScreen_Art/" />
+        <folder expanded="1" path="animation-folder/MovingBlock1/" />
+        <folder expanded="1" path="animation-folder/MovingBlock2/" />
+        <folder expanded="1" path="animation-folder/MovingPillar/" />
+        <folder expanded="1" path="animation-folder/Block/" />
+        <folder expanded="1" path="animation-folder/MovingBlocks_Button/" />
+        <folder expanded="1" path="animation-folder/Button_MovingBlock/" />
+        <folder expanded="1" path="animation-folder/FallingBlock/" />
+        <folder expanded="1" path="animation-folder/Block2/" />
+        <folder expanded="1" path="animation-folder/MetalCrusher/" />
+        <folder expanded="1" path="animation-folder/MetalBlock/" />
+        <folder expanded="1" path="animation-folder/SinkingPlatform/" />
+        <folder expanded="1" path="animation-folder/Fireball/" />
+        <folder expanded="1" path="animation-folder/Lava_AnimatedTiles/" />
+        <folder expanded="1" path="animation-folder/HFZBG_BackFire/" />
+        <folder expanded="1" path="animation-folder/HFZBG_FrontFire/" />
+        <folder expanded="1" path="animation-folder/HFZBG_BackFire2/" />
+        <folder expanded="1" path="animation-folder/Ghost_UpTrigger/" />
+        <folder expanded="1" path="animation-folder/Ghost_DownTrigger/" />
+        <folder expanded="1" path="animation-folder/Ghost_LeftTrigger/" />
+        <folder expanded="1" path="animation-folder/Ghost_RightTrigger/" />
+        <folder expanded="1" path="animation-folder/PacMobile/" />
+        <folder expanded="1" path="animation-folder/PacMobile_LeftSensor/" />
+        <folder expanded="1" path="animation-folder/PacMobile_RightSensor/" />
+        <folder expanded="1" path="animation-folder/PacMobile_UpSensor/" />
+        <folder expanded="1" path="animation-folder/PacMobile_DownSensor/" />
+        <folder expanded="1" path="animation-folder/PacDot/" />
+        <folder expanded="1" path="animation-folder/PowerPellet/" />
+        <folder expanded="1" path="animation-folder/RedGhost/" />
+        <folder expanded="1" path="animation-folder/PinkGhost/" />
+        <folder expanded="1" path="animation-folder/BlueGhost/" />
+        <folder expanded="1" path="animation-folder/OrangeGhost/" />
+        <folder expanded="1" path="animation-folder/HFZ_PacManSectionEnterDoor/" />
+        <folder expanded="1" path="animation-folder/HFZ_PacManSectionExitDoor/" />
+        <folder expanded="1" path="animation-folder/HFZ_Mushroom/" />
+        <folder expanded="1" path="animation-folder/HFZ_WoodenLift/" />
+        <folder expanded="1" path="animation-folder/HFZBoss_Shell/" />
+        <folder expanded="1" path="animation-folder/HFZBoss_Body/" />
+        <folder expanded="1" path="animation-folder/HFZBoss_Fireball/" />
+        <folder expanded="1" path="animation-folder/HFZBoss_ProjectileSpawner/" />
+        <folder expanded="1" path="animation-folder/HFZBoss_ProjectileSpawner2/" />
+        <folder expanded="1" path="animation-folder/Puyo_Spawner/" />
+        <folder expanded="1" path="animation-folder/Puyo_Red/" />
+        <folder expanded="1" path="animation-folder/Puyo_Green/" />
+        <folder expanded="1" path="animation-folder/Puyo_Purple/" />
+        <folder expanded="1" path="animation-folder/Puyo_Blue/" />
+        <folder expanded="1" path="animation-folder/Puyo_Yellow/" />
+        <folder expanded="1" path="animation-folder/Puyo_StartTrigger/" />
+        <folder expanded="1" path="animation-folder/Puyo_Door/" />
+        <folder expanded="1" path="animation-folder/Puyo_DropShadow/" />
+        <folder expanded="1" path="animation-folder/MovingPlatform_EPZ/" />
+        <folder expanded="1" path="animation-folder/LongBumper/" />
+        <folder expanded="1" path="animation-folder/BounceyLaser/" />
+        <folder expanded="1" path="animation-folder/Eggman/" />
+        <folder expanded="1" path="animation-folder/EPZBoss_PlasticShield/" />
+        <folder expanded="1" path="animation-folder/EPZBoss_Ball/" />
+        <folder expanded="1" path="animation-folder/EPZBoss_Projectile/" />
+        <folder expanded="1" path="animation-folder/EPZBoss_Cannon/" />
+        <folder expanded="1" path="animation-folder/EPZBoss_ProjectileSpawn/" />
+        <folder expanded="1" path="animation-folder/EPZ_AnimatedFan/" />
+        <folder expanded="1" path="animation-folder/BridgeBG/" />
+        <folder expanded="1" path="animation-folder/FarAwayBuildingsBG/" />
+        <folder expanded="1" path="animation-folder/FrontBuildingsBG/" />
+        <folder expanded="1" path="animation-folder/FrontBuildingsBG2/" />
+        <folder expanded="1" path="animation-folder/BPZ_Bumper/" />
+        <folder expanded="1" path="animation-folder/BPZ_Elevator/" />
+        <folder expanded="1" path="animation-folder/BPZ_ElevatorStop/" />
+        <folder expanded="1" path="animation-folder/BPZ_MovingBlocks/" />
+        <folder expanded="1" path="animation-folder/BPZ_Bumper1/" />
+        <folder expanded="1" path="animation-folder/BPZ_MovingPlatform/" />
+        <folder expanded="1" path="animation-folder/BPZ_MovingPlatformDirectionChanger/" />
+        <folder expanded="1" path="animation-folder/CPZ_ScoreTunnel/" />
+        <folder expanded="1" path="animation-folder/BPZ_Flipper/" />
+        <folder expanded="1" path="animation-folder/BPZ_FlipperCollison/" />
+        <folder expanded="1" path="animation-folder/BPZ_SlotMachine/" />
+        <folder expanded="1" path="animation-folder/CPZ_SlotMachineTunnel/" />
+        <folder expanded="1" path="animation-folder/BPZ_SlotMachine1/" />
+        <folder expanded="1" path="animation-folder/BPZ_SlotMachine2/" />
+        <folder expanded="1" path="animation-folder/BPZ_HardBall/" />
+        <folder expanded="1" path="animation-folder/PlayerMask_PortalGun/" />
+        <folder expanded="1" path="animation-folder/PlayerMask_PortalGun/Blue/" />
+        <folder expanded="1" path="animation-folder/PlayerMask_PortalGun/Yellow/" />
+        <folder expanded="1" path="animation-folder/Portal_Projectile/" />
+        <folder expanded="1" path="animation-folder/Portal_Blue/" />
+        <folder expanded="1" path="animation-folder/Portal_Yellow/" />
+        <folder expanded="1" path="animation-folder/Portal_collisontop1/" />
+        <folder expanded="1" path="animation-folder/Portal_collisonleft1/" />
+        <folder expanded="1" path="animation-folder/Portal_collisonright1/" />
+        <folder expanded="1" path="animation-folder/Portal_collisondestroy/" />
+        <folder expanded="1" path="animation-folder/Portal_GoThroughWall/" />
+        <folder expanded="1" path="animation-folder/BPZ_PortalSection_Button/" />
+        <folder expanded="1" path="animation-folder/BPZ_PortalSection_Door/" />
+        <folder expanded="1" path="animation-folder/BPZBoss_FallingBGPlatform/" />
+        <folder expanded="1" path="animation-folder/BPZBoss_FallingBGCave/" />
+        <folder expanded="1" path="animation-folder/BPZBoss_FallingCOPE/" />
+        <folder expanded="1" path="animation-folder/MovingWall/" />
+        <folder expanded="1" path="animation-folder/BPZ_BossFloor/" />
+        <folder expanded="1" path="animation-folder/BPZ_Eggman/" />
+        <folder expanded="1" path="animation-folder/BPZ_Boss/" />
+        <folder expanded="1" path="animation-folder/BPZ_BossBumper/" />
+        <folder expanded="1" path="animation-folder/BPZ_BossMovingGun/" />
+        <folder expanded="1" path="animation-folder/BPZ_BossBomb/" />
+        <folder expanded="1" path="animation-folder/BPZBoss_FallingBumper/" />
+        <folder expanded="1" path="animation-folder/BPZ_BossBumperSpawner/" />
+        <folder expanded="1" path="animation-folder/BPZBoss_FallingRing/" />
+    </folders-expanded>
+</c2uistate>

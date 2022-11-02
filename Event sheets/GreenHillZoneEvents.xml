@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GreenHillZoneEvents</name>
+    <events>
+        <include>TitleCardEvents</include>
+        <include>CollisionEvents</include>
+        <include>BasicControlEvents</include>
+        <event-block sid="174642780588092">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="437541245433560" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="452453231776229" type="System">
+                    <param id="0" name="Variable">ZoneID</param>
+                    <param id="1" name="Value">13.1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="577085848553079" type="TitleCard_ActNumber">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="736496598745830" type="TitleCard_Text_ZoneName">
+                    <param id="0" name="Text">&quot;GREEN HILL AGAIN&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="597110617302280">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="357741965432070" type="System">
+                            <param id="0" name="Variable">MusicPlaylist</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="226675886785462" type="Audio">
+                            <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by Joenick)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;greenhillzone&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="173106375439550">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="714167873167353" type="System">
+                            <param id="0" name="Variable">MusicPlaylist</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="101114151531008" type="Audio">
+                            <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by A-S-H)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;greenhillzone&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

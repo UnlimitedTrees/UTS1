@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>WarehouseZoneEvents</name>
+    <events>
+        <include>TitleCardEvents</include>
+        <include>CollisionEvents</include>
+        <include>BasicControlEvents</include>
+        <event-block sid="385424640731269">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="203290879599298" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="554605170560974" type="System">
+                    <param id="0" name="Variable">ZoneID</param>
+                    <param id="1" name="Value">12.1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="738175349270079" type="TitleCard_ActNumber">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="672432183843771" type="TitleCard_Text_ZoneName">
+                    <param id="0" name="Text">&quot;WAREHOUSE&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="963666664103872">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="323052495720143" type="System">
+                            <param id="0" name="Variable">MusicPlaylist</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="761102772076194" type="Audio">
+                            <param id="0" name="Audio file">WarehouseZone (Jumping Flash! World 6-1)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;warehousezone&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="570904929102886">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="627495946407470" type="System">
+                            <param id="0" name="Variable">MusicPlaylist</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="792490767606000" type="Audio">
+                            <param id="0" name="Audio file">WarehouseZone (Jumping Flash! World 6-1)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;warehousezone&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ReadSSRGSplashEvents</name>
+    <events>
+        <event-block sid="155627610453870">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="490008573952230" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="988870292032138" type="BlackFadeout" />
+                <action id="-16" name="Wait" sid="687130949399355" type="System">
+                    <param id="0" name="Seconds">5.0</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="151218708894151" type="BlackFadeout">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="682656055102485" type="BlackFadeout">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="757023352816324" type="BlackFadeout" />
+                <action id="-16" name="Wait" sid="970857190773200" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="844931802683335" type="System">
+                    <param id="0" name="Layout">CreditsSplashScreen</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Preload jingles</comment>
+        <event-block disabled="1" sid="813270590674164">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="518871718269890" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="951206200582964" type="Audio">
+                    <param id="0" name="Audio file">ExtraLife</param>
+                </action>
+                <action id="4" name="Preload" sid="703004285766270" type="Audio">
+                    <param id="0" name="Audio file">SpeedUp</param>
+                </action>
+                <action id="4" name="Preload" sid="654076535209898" type="Audio">
+                    <param id="0" name="Audio file">Drown</param>
+                </action>
+                <action id="4" name="Preload" sid="566369733086287" type="Audio">
+                    <param id="0" name="Audio file">Invinciblity (Hatsune Miku - Ai Kotoba)</param>
+                </action>
+                <action id="4" name="Preload" sid="910756526857613" type="Audio">
+                    <param id="0" name="Audio file">zonefinish</param>
+                </action>
+                <action id="4" name="Preload" sid="385015950968988" type="Audio">
+                    <param id="0" name="Audio file">TitleScreen (Sonic CD JP - Title Screen SMPS remix by Jubbalub)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

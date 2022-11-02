@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SonicAnimations</name>
+    <events>
+        <event-block sid="653605800334621">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="179776713918007" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="236152081384111" type="Camera">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="155057671747076" type="Player">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="460969523739698" title="Moving">
+            <sub-events>
+                <event-block sid="792224601879400">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="7" name="On stopped" sid="549030929799373" type="Player" />
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="927008847480742" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="110372516126840" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="859027468260064" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="980487062422434" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="502297121420556" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="765924268754480">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="7" name="On stopped" sid="651876936042030" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="847365282165436" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="441139384313126" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="128963333100149" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="516968112706447">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="9" name="On landed" sid="283802062678355" type="Player" />
+                        <condition behavior="SonicPhysics" id="0" inverted="1" name="Is moving" sid="643951339986718" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="687936433557394" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="393130775041820" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="426456232209436" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="944607621482686" type="ShieldMasks">
+                            <param id="0" name="Instance variable">IsDoubleJumping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="425199522903850" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="591888560335877">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="9" name="On landed" sid="394212255711623" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="215718850081378" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="803963434122625" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="765859653174351" type="ShieldMasks">
+                            <param id="0" name="Instance variable">IsDoubleJumping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="215088799025970" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="512352840662807">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="172609345551028" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="726673669373046" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="672671879120313" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="564041166141677">
+                            <conditions>
+                                <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="517491397258564" type="Player">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Speed">260</param>
+                                    <param id="2" name="Vector">1</param>
+                                </condition>
+                                <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="674960319743881" type="Player">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Speed">-260</param>
+                                    <param id="2" name="Vector">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-20" name="Rotate toward angle" sid="227161982248526" type="PlayerMask_Sonic">
+                                    <param id="0" name="Degrees">5</param>
+                                    <param id="1" name="Angle">Player.SonicPhysics.SurfaceAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="449432981569534">
+                            <conditions>
+                                <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="370096626536934" type="Player">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Speed">260</param>
+                                    <param id="2" name="Vector">1</param>
+                                </condition>
+                                <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="445317508397021" type="Player">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Speed">-260</param>
+                                    <param id="2" name="Vector">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-20" name="Rotate toward angle" sid="173079358168463" type="PlayerMask_Sonic">
+                                    <param id="0" name="Degrees">10</param>
+                                    <param id="1" name="Angle">Player.SonicPhysics.SurfaceAngle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="906006667156703">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="750225609398404" type="System" />
+                        <condition behavior="SonicPhysics" id="3" inverted="1" name="Is jumping" sid="493570511925846" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="132461744978801">
+                            <conditions>
+                                <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="252327953515404" type="Player">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Speed">120</param>
+                                    <param id="2" name="Vector">1</param>
+                                </condition>
+                                <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="466141224180622" type="Player">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Speed">-120</param>
+                                    <param id="2" name="Vector">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="161335380961058" type="PlayerMask_Sonic">
+                                    <param id="0" name="Speed">Player.SonicPhysics.Speed / 10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Walking</comment>
+                <event-block sid="862276405650059">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="425166253635462" type="Player" />
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="774458756400485" type="Player" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="322973735450920" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Speed">290</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="519185262191626" type="PlayerMask_Sonic" />
+                        <condition id="-7" name="Compare instance variable" sid="526491565413473" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="510077156635027" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="755431312120848">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="156668352021757" type="Player" />
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="115972662888598" type="Player" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="109959414567021" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Speed">-290</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="233558665058596" type="PlayerMask_Sonic" />
+                        <condition id="-7" name="Compare instance variable" sid="371544644577224" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="261162833353780" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Running</comment>
+                <event-block sid="328982019724516">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="472210666910633" type="Player" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="889223567740453" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">290</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="575726790518613" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Speed">400</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="604737513616047" type="PlayerMask_Sonic" />
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="349705498586957" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="299060038275061" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="120979476753731" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="329692026323519">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="432227739961449" type="Player" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="501596234201398" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">-290</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="118089617417570" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Speed">-400</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="570895303048107" type="PlayerMask_Sonic" />
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="991578041805929" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="445962970423948" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="684247803199129" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Peelout Run</comment>
+                <event-block sid="473509937311368">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="893414228935622" type="Player" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="318502754855317" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">400</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="320795962109784" type="PlayerMask_Sonic" />
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="831001663931204" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="146754464588798" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="890330509613246" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;PeelOut&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="537004863743960">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="0" name="Is moving" sid="834055629020398" type="Player" />
+                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="699842767449480" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">-400</param>
+                            <param id="2" name="Vector">1</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="559911265478137" type="PlayerMask_Sonic" />
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="206693908476795" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="169907347388117" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="925131754120778" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;PeelOut&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="647381459063073" title="Spinning">
+            <sub-events>
+                <event-block sid="571569493348493">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="5" name="On jump" sid="915024810109103" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="611554296908268" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Spin1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="790040455406248" type="Player">
+                            <param id="0" name="Instance variable">IsSpinning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="835663639419338" type="PlayerMask_Sonic">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="239234243354988" type="Audio">
+                            <param id="0" name="Audio file">Jumping</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="937784490614090">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="875254837713492" type="Player">
+                            <param id="0" name="Instance variable">IsRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="109009711274053" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Spin2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>RingsEvents</name>
+    <events>
+        <variable constant="0" name="Lives" sid="803554370983054" static="0" type="number">3</variable>
+        <variable constant="0" name="Score" sid="872614498275713" static="0" type="number">0</variable>
+        <event-group description="" sid="736071677509653" title="HUD">
+            <sub-events>
+                <event-block sid="393811369016306">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="318938760261335" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="746786416247577" type="ScoreText">
+                            <param id="0" name="Text">Score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="401227087243464" type="RingText">
+                            <param id="0" name="Text">Player.Rings</param>
+                        </action>
+                        <action id="0" name="Set text" sid="492875475565450" type="LifeCounter_Text">
+                            <param id="0" name="Text">Lives</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="558833297722404">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="662326777545685" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="380718787179286" type="TitleCard_ActNumber">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="520150725978827" type="HUD_EndCard">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="345784595376425" type="TimeText">
+                            <param id="0" name="Instance variable">FrameTimer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="195696032962104" type="TimeText">
+                            <param id="0" name="Instance variable">Seconds</param>
+                            <param id="1" name="Value">floor((TimeText.FrameTimer/60)%60)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="125151368121395" type="TimeText">
+                            <param id="0" name="Instance variable">Minutes</param>
+                            <param id="1" name="Value">floor(TimeText.FrameTimer/3600)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="943572702774696" type="TimeText">
+                            <param id="0" name="Text">TimeText.Minutes &amp; &quot;:&quot; &amp; zeropad(TimeText.Seconds, 2)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="611425496742508">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="364015906364987" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block disabled="1" sid="505399739432923">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="277511173364014" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="369696268912020" type="TimeText">
+                                    <param id="0" name="Text">TimeText.Minutes &amp; &quot;:&quot; &amp; TimeText.Seconds</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="331014939606304" title="Rings">
+            <sub-events>
+                <event-block sid="982963449503488">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="773785611014375" type="Player">
+                            <param id="0" name="Object">Ring</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="185673526679223" type="Player">
+                            <param id="0" name="Instance variable">Rings</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="329901548041923" type="Ring">
+                            <param id="0" name="Animation">&quot;Flash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="608005191885795" type="Audio">
+                            <param id="0" name="Audio file">Ring</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="938258074853804">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="339545490011998" type="Sonic_HardRollSprite">
+                            <param id="0" name="Object">Ring</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="950474443258350" type="Sonic_HardRollSprite">
+                            <param id="0" name="Instance variable">IsHardRolling</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="684355908068457" type="Player">
+                            <param id="0" name="Instance variable">Rings</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="480387522427637" type="Ring">
+                            <param id="0" name="Animation">&quot;Flash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="972273575930095" type="Audio">
+                            <param id="0" name="Audio file">Ring</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="994929066108622">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="856978549501470" type="Ring">
+                            <param id="0" name="Animation">&quot;Flash&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="527318412705184" type="Ring" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="822726728459029" title="LoseRings">
+            <sub-events>
+                <comment>Ring loss code taken from Sonic Construct 2 Worlds</comment>
+                <event-block sid="656336968913055">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="963109305895293" type="Player">
+                            <param id="0" name="Object">Ring_Bounce</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="827361666879147" type="PlayerMask_Sonic" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="229230133982795" type="Player">
+                            <param id="0" name="Instance variable">Rings</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="326033280450405" type="Ring_Bounce">
+                            <param id="0" name="Animation">&quot;Flash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="489507815237020" type="Audio">
+                            <param id="0" name="Audio file">Ring</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="952543850919743">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="779790045857929" type="Ring_Bounce">
+                            <param id="0" name="Animation">&quot;Flash&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="734113311667391" type="Ring_Bounce" />
+                    </actions>
+                </event-block>
+                <event-block sid="666015161897371">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="542539586397760" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="120285084785358" type="Ring_Bounce">
+                            <param id="0" name="Instance variable">Time</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="561164025263654">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="440224214278303" type="Ring_Bounce">
+                            <param id="0" name="Instance variable">Time</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="556743896536714" type="Ring_Bounce" />
+                    </actions>
+                </event-block>
+                <event-block sid="102669894703419">
+                    <conditions>
+                        <condition id="0" name="On function" sid="105774599619221" type="Function">
+                            <param id="0" name="Name">&quot;LoseRings&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="460363570209569">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="938645743954383" type="Player">
+                                    <param id="0" name="Instance variable">Rings</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">32</param>
+                                </condition>
+                                <condition id="-12" name="Repeat" sid="473124131791612" type="System">
+                                    <param id="0" name="Count">Player.Rings</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="559018259040298" type="Player">
+                                    <param id="0" name="Object">Ring_Bounce</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="219226654037969" type="Ring_Bounce">
+                                    <param id="0" name="Angle">random(360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="229312444017993">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="524771220206077" type="Player">
+                                    <param id="0" name="Instance variable">Rings</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">32</param>
+                                </condition>
+                                <condition id="-12" name="Repeat" sid="489662826945614" type="System">
+                                    <param id="0" name="Count">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="637452028696017" type="Player">
+                                    <param id="0" name="Object">Ring_Bounce</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="883543293312465" type="Ring_Bounce">
+                                    <param id="0" name="Angle">random(360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="540587077819314" title="GettingHit">
+            <sub-events>
+                <event-block sid="813414091182840">
+                    <conditions>
+                        <condition id="0" name="On function" sid="958542673758573" type="Function">
+                            <param id="0" name="Name">&quot;OnKilled&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="782163092363718" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="590610581990221" type="DeathPlane" />
+                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="194214580751231" type="Player">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="137148238080082" type="Player">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="503614440195824" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="378444878545326" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="483658437371106" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="435211061980239" type="Camera" />
+                        <action id="-11" name="Subtract from" sid="579829663595877" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="706060564728980" type="Audio">
+                            <param id="0" name="Audio file">Death</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="761288582925210" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="226038774729826" type="Audio" />
+                        <action id="-26" name="Restart layout" sid="176355207906914" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="787313729110065">
+                    <conditions>
+                        <condition behavior="SonicPhysics" id="9" name="On landed" sid="934363293713954" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="378190165319668" type="Player">
+                            <param id="0" name="Instance variable">IsGettingHit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="740887782897918">
+                    <conditions>
+                        <condition id="0" name="On function" sid="317609175391100" type="Function">
+                            <param id="0" name="Name">&quot;GettingHit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="628675623319859">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="179678804771247" type="Player">
+                                    <param id="0" name="Instance variable">IsGettingHit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="762276845300126" type="Player">
+                                    <param id="0" name="Instance variable">IsDead</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="815239397882029" type="PlayerMask_Sonic" />
+                                <condition id="-7" name="Compare instance variable" sid="725368789248337" type="Player">
+                                    <param id="0" name="Instance variable">IsInvincible</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="971350609066514" type="Player">
+                                    <param id="0" name="Vector Y">-200</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="185211845953274" type="Player">
+                                    <param id="0" name="Vector X">-150</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="529087092551956" type="PlayerMask_Sonic">
+                                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="564760460346125" type="PlayerMask_Sonic">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.5</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="915676272667474">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="625070801034744" type="Player">
+                                            <param id="0" name="Instance variable">Rings</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="835997186730145" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="797363370608454" type="Function">
+                                            <param id="0" name="Name">&quot;OnKilled&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="949445866958418">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="875034821792319" type="Player">
+                                            <param id="0" name="Instance variable">Rings</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="550348270537171" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="796637399590407" type="Player">
+                                            <param id="0" name="Instance variable">IsGettingHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="867652966916294" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="745819860861090" type="Function">
+                                            <param id="0" name="Name">&quot;LoseRings&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="204844478477995" type="Player">
+                                            <param id="0" name="Instance variable">Rings</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="414133257365067" type="Audio">
+                                            <param id="0" name="Audio file">Ring_Lose</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="129121619348621">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="202515424524089" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="568585615321549" type="ShieldMasks">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="784908617231209" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="259908244716821" type="Audio">
+                                            <param id="0" name="Audio file">Death</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="497095185631595">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="452898972814721" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="997659373804894" type="ShieldMasks">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="664337054707421" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="270898210937963" type="Audio">
+                                            <param id="0" name="Audio file">Death</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="906081619250144">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="370419199825291" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="982794541285667" type="ShieldMasks">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="132267237340548" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="949574746318185" type="Audio">
+                                            <param id="0" name="Audio file">Death</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="453978036353333">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="505601133684207" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="494513653087464" type="ShieldMasks">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="397310344962431" type="ShieldMasks">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="901278604486430" type="Audio">
+                                            <param id="0" name="Audio file">Death</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

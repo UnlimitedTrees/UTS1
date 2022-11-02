@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ControlsSplashScreenEvents</name>
+    <events>
+        <variable constant="0" name="ControlSplashScreenActive" sid="902880510277347" static="0" type="number">0</variable>
+        <event-block sid="934468553653065">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="251208237354462" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="671079928925206" type="BlackFadeout" />
+            </actions>
+        </event-block>
+        <event-block sid="891097017083227">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="288999892309788" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="139624854774207" type="BlackFadeout">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="826528995936848" type="BlackFadeout">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="363950352870286" type="BlackFadeout" />
+                <action id="-16" name="Wait" sid="720097510693017" type="System">
+                    <param id="0" name="Seconds">1.1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="146142487708474" type="System">
+                    <param id="0" name="Layout">TitleScreen</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Preload music</comment>
+        <event-block disabled="1" sid="241956929903316">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="455104324272650" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="341644726551470" type="Audio">
+                    <param id="0" name="Audio file">ExtrasMenu (Hideki Naganuma - Ebb &amp; Flow)</param>
+                </action>
+                <action id="4" name="Preload" sid="367635198732706" type="Audio">
+                    <param id="0" name="Audio file">menumusic</param>
+                </action>
+                <action id="4" name="Preload" sid="210161790839967" type="Audio">
+                    <param id="0" name="Audio file">testzoneact1</param>
+                </action>
+                <action id="4" name="Preload" sid="541363833884531" type="Audio">
+                    <param id="0" name="Audio file">testzoneact2</param>
+                </action>
+                <action id="4" name="Preload" sid="291657022285982" type="Audio">
+                    <param id="0" name="Audio file">EggPlant1Music (Metropolis Street Racer - Am I Only Dreaming)</param>
+                </action>
+                <action id="4" name="Preload" sid="918726653361200" type="Audio">
+                    <param id="0" name="Audio file">EggPlantBeta1 (Sonic CD US - Wacky Workbench Present SMPS remix by A-S-H)</param>
+                </action>
+                <action id="4" name="Preload" sid="499607428704996" type="Audio">
+                    <param id="0" name="Audio file">HotForest1Music (Daytona USA Saturn - Pounding Pavement)</param>
+                </action>
+                <action id="4" name="Preload" sid="975655256489245" type="Audio">
+                    <param id="0" name="Audio file">BrightParadise1Music (TMNT 1990 Movie - 9.95)</param>
+                </action>
+                <action id="4" name="Preload" sid="275672925498232" type="Audio">
+                    <param id="0" name="Audio file">BrightParadiseBeta1 (Love Live! School Idol Project - Snow Halation SMPS remix by Joenick)</param>
+                </action>
+                <action id="4" name="Preload" sid="925948713667548" type="Audio">
+                    <param id="0" name="Audio file">ColdMines1 (Last Resort - The Melting Point</param>
+                </action>
+                <action id="4" name="Preload" sid="482598604109421" type="Audio">
+                    <param id="0" name="Audio file">EggBrain1 (LaTale - Hanger)</param>
+                </action>
+                <action id="4" name="Preload" sid="511523631282904" type="Audio">
+                    <param id="0" name="Audio file">EggBrain2 (Greylancer - Stage 1)</param>
+                </action>
+                <action id="4" name="Preload" sid="575500119907677" type="Audio">
+                    <param id="0" name="Audio file">AtmosphereEscape1 (Mario Hoops 3 on 3 - Sherbet Land (CD Ver)</param>
+                </action>
+                <action id="4" name="Preload" sid="548330676119730" type="Audio">
+                    <param id="0" name="Audio file">HotForestBossMusic (Mamorukun Curse - Mantra (Final Boss 1)</param>
+                </action>
+                <action id="4" name="Preload" sid="649673097488336" type="Audio">
+                    <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by A-S-H)</param>
+                </action>
+                <action id="4" name="Preload" sid="818858229701996" type="Audio">
+                    <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by Joenick)</param>
+                </action>
+                <action id="4" name="Preload" sid="999038375664053" type="Audio">
+                    <param id="0" name="Audio file">UnlimitedTreesZone (19.5 - Buken &amp; The Peshay</param>
+                </action>
+                <action id="4" name="Preload" sid="649876665822119" type="Audio">
+                    <param id="0" name="Audio file">WarehouseZone (Jumping Flash! World 6-1)</param>
+                </action>
+                <action id="4" name="Preload" sid="599100342341434" type="Audio">
+                    <param id="0" name="Audio file">BrightParadiseBoss (Jumping Flash! - Boss Aloha Robot</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

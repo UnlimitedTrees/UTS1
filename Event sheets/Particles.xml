@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Particles</name>
+    <events>
+        <event-group description="" sid="787787715052066" title="Flicky">
+            <sub-events>
+                <event-block sid="870871245318940">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="964946691711882" type="Flicky" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="357478043331776" type="Flicky" />
+                    </actions>
+                </event-block>
+                <event-block sid="230054148535781">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="603741916198253" type="Flicky" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="312478056649500" type="Flicky">
+                            <param id="0" name="Animation">&quot;Fly&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="907761945351852" type="Flicky">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="638792135921324" type="Flicky">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="901140258638932">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="864472748851838" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="479693470651958" type="Flicky">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="602556601941965" type="Flicky">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="607986506235331" title="Points">
+            <sub-events>
+                <event-block sid="484846694188612">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="402659253381405" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="505404827336166" type="Points">
+                            <param id="0" name="Y">Self.Y-0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803043330284220">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="813307091859146" type="Points" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="370076253407771" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="229675411742725" type="Points" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="327797557747407" title="Explosion">
+            <sub-events>
+                <event-block sid="961998496995388">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="227652113667274" type="Explosion">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="292127454245036" type="Explosion" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="526294132025926" title="MonitorPopUp">
+            <sub-events>
+                <event-block sid="857392749530786">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="279281547970618" type="Monitor_PopUp" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="790300690346445" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="159388802371019" type="Monitor_PopUp" />
+                    </actions>
+                </event-block>
+                <event-block sid="124441666288609">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="709062003364431" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="332629938983089" type="Monitor_PopUp">
+                            <param id="0" name="Y">Self.Y-0.4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TestZone1Events</name>
+    <events>
+        <include>TitleCardEvents</include>
+        <include>CollisionEvents</include>
+        <include>BasicControlEvents</include>
+        <comment>Set ZoneID to (number of zone).1/2/3 (for acts) (this is used for music replay)</comment>
+        <event-block sid="422021685670135">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="406947822455168" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="937693126086726" type="Audio">
+                    <param id="0" name="Audio file">testzoneact1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;testzoneact1&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="325052096600376" type="System">
+                    <param id="0" name="Variable">ZoneID</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+                <action id="4" name="Set animation" sid="302441037659935" type="TitleCard_ActNumber">
+                    <param id="0" name="Animation">&quot;Act1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set text" sid="380016029633282" type="TitleCard_Text_ZoneName">
+                    <param id="0" name="Text">&quot;    TEST&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

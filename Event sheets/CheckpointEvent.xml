@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CheckpointEvent</name>
+    <events>
+        <variable constant="0" name="Checkpoint_Active" sid="103040681548146" static="0" type="number">0</variable>
+        <variable constant="0" name="Checkpoint_SavedXPosition" sid="930992121813327" static="0" type="number">0</variable>
+        <variable constant="0" name="Checkpoint_SavedYPosition" sid="712202704640830" static="0" type="number">0</variable>
+        <variable constant="0" name="Checkpoint_SavedRings" sid="815233931728257" static="0" type="number">0</variable>
+        <variable constant="0" name="Checkpoint_SavedTime_Seconds" sid="400931843902581" static="0" type="number">0</variable>
+        <variable constant="0" name="Checkpoint_SavedTime" sid="234403049514334" static="0" type="number">0</variable>
+        <variable constant="0" name="Checkpoint_SavedTime_Minutes" sid="368231682540823" static="0" type="number">0</variable>
+        <event-group description="" sid="501596518708154" title="Checkpoint">
+            <sub-events>
+                <event-block sid="886867526595461">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="286881996960792" type="System" />
+                        <condition id="-14" name="Compare variable" sid="515116191941788" type="System">
+                            <param id="0" name="Variable">Checkpoint_Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="779387070680938" type="Player">
+                            <param id="0" name="X">Checkpoint_SavedXPosition</param>
+                            <param id="1" name="Y">Checkpoint_SavedYPosition</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="880649242414336" type="Player">
+                            <param id="0" name="Instance variable">Rings</param>
+                            <param id="1" name="Value">Checkpoint_SavedRings</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="537511171093867" type="TimeText">
+                            <param id="0" name="Instance variable">Seconds</param>
+                            <param id="1" name="Value">Checkpoint_SavedTime_Seconds</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="251225220626724" type="TimeText">
+                            <param id="0" name="Instance variable">Minutes</param>
+                            <param id="1" name="Value">Checkpoint_SavedTime_Minutes</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="617671449986201" type="TimeText">
+                            <param id="0" name="Instance variable">FrameTimer</param>
+                            <param id="1" name="Value">Checkpoint_SavedTime</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="837186128865940">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="590975045873699" type="Player">
+                            <param id="0" name="Object">Checkpoint</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="418938311674539" type="Checkpoint">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="265269558631985" type="System">
+                            <param id="0" name="Variable">Checkpoint_Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="405964252180741" type="Checkpoint">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="989284822901833" type="Checkpoint">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="203884617637947" type="Audio">
+                            <param id="0" name="Audio file">Checkpoint</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="962382951041806" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedRings</param>
+                            <param id="1" name="Value">Player.Rings</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="767320176181940" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedXPosition</param>
+                            <param id="1" name="Value">Player.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="586357952324269" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedYPosition</param>
+                            <param id="1" name="Value">Player.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="611611295837066" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime_Seconds</param>
+                            <param id="1" name="Value">TimeText.Seconds</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="273841650742736" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime_Minutes</param>
+                            <param id="1" name="Value">TimeText.Minutes</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="259865657234321" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime</param>
+                            <param id="1" name="Value">TimeText.FrameTimer</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CollisionEvents</name>
+    <events>
+        <event-group description="" sid="604067985112441" title="PathSwapper">
+            <sub-events>
+                <event-block sid="489955352592469">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="486614300563946" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="729757612220241" type="PathSwapper">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="952153205839389" type="PathSwapper_Path1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="376002471869439" type="PathSwapper_Path2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Normal PathSwapper (used for things such as going through a loop)</comment>
+                <event-block sid="301621650926497">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="236386720699413" type="Player">
+                            <param id="0" name="Object">PathSwapper</param>
+                        </condition>
+                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="933981398942364" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="701365489642958">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="816016567537913" type="Player">
+                                    <param id="0" name="Instance variable">Path</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="778457929274158">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="417231730474481" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Speed">320</param>
+                                            <param id="2" name="Vector">1</param>
+                                        </condition>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="759239283998045" type="PlayerMask_Sonic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="128712547720256" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="757070211449408" type="Player">
+                                            <param id="0" name="Instance variable">Path</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="282525466177493">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="669094542541116" type="Player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Speed">-320</param>
+                                            <param id="2" name="Vector">1</param>
+                                        </condition>
+                                        <condition id="7" name="Is mirrored" sid="806603650400156" type="PlayerMask_Sonic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="488017605224882" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="368580005497617" type="Player">
+                                            <param id="0" name="Instance variable">Path</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="647668093903761">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="128852422489186" type="Player">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Speed">320</param>
+                                            <param id="2" name="Vector">1</param>
+                                        </condition>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="800373762272516" type="PlayerMask_Sonic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="813897469811099" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="711451397127583" type="Player">
+                                            <param id="0" name="Instance variable">Path</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="832327497682202">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="911952901849308" type="Player">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Speed">-320</param>
+                                            <param id="2" name="Vector">1</param>
+                                        </condition>
+                                        <condition id="7" name="Is mirrored" sid="491420375448651" type="PlayerMask_Sonic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="131849569297287" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="472605781506730" type="Player">
+                                            <param id="0" name="Instance variable">Path</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="501927598014579">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="961660130858845" type="Player">
+                                    <param id="0" name="Instance variable">Path</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="447148870001478">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="851119795156286" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Speed">320</param>
+                                            <param id="2" name="Vector">1</param>
+                                        </condition>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="174110430609860" type="PlayerMask_Sonic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="108327655020617" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="219294194701772" type="Player">
+                                            <param id="0" name="Instance variable">Path</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="972275316522852">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="536581711331146" type="Player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Speed">-320</param>
+                                            <param id="2" name="Vector">1</param>
+                                        </condition>
+                                        <condition id="7" name="Is mirrored" sid="563380085474854" type="PlayerMask_Sonic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="623866970807061" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="594551466870111" type="Player">
+                                            <param id="0" name="Instance variable">Path</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="434589803611609">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="424711785848566" type="Player">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Speed">320</param>
+                                            <param id="2" name="Vector">1</param>
+                                        </condition>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="284747354035000" type="PlayerMask_Sonic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="899752206129561" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="946695437456192" type="Player">
+                                            <param id="0" name="Instance variable">Path</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="611702137315069">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="972680010775951" type="Player">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Speed">-320</param>
+                                            <param id="2" name="Vector">1</param>
+                                        </condition>
+                                        <condition id="7" name="Is mirrored" sid="836524774306816" type="PlayerMask_Sonic" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="539061295973499" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="920385377498125" type="Player">
+                                            <param id="0" name="Instance variable">Path</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>aaaaaaa</comment>
+                <event-block sid="730450206111805">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="838341818938678" type="Player">
+                            <param id="0" name="Object">PathSwapper_Path1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="793738036200969" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725384499848921">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="852200412841971" type="Player">
+                            <param id="0" name="Object">PathSwapper_Path2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="869217894709256" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Stuff for setting the collisons (Path 2 is used for death)</comment>
+                <event-block sid="437746582086306">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="156121973054308" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="908715143049406" type="Block_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="811175595392870" type="Ramp1_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="746518950185479" type="Ramp2_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="388052078884890" type="Ramp3_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="842319323756826" type="Ramp4_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="573776772065668" type="Ramp5_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="937074137563138" type="Ramp6_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="990158458813354" type="Ramp7_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="153921054576085" type="Slope1_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="802627480835511" type="Slope2_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="484312686466623" type="SmallBlock_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="968360930857532" type="SmallSlope1_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="100047712163302" type="SmallSlope2_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="788055191659803" type="SmallSlope3_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="179377647955057" type="SmallSlope4_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="568754873429667" type="Block_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="457735630942170" type="Ramp1_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="902633509766803" type="Ramp2_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="609905785220936" type="Ramp3_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="831605001948275" type="Ramp4_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="321113774083388" type="Ramp5_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="555805341796659" type="Ramp6_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="745129727495652" type="Ramp7_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="515010643015728" type="SmallBlock_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="593754679658711" type="Block2_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="866587183381693" type="Ramp_Path1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="649673003815335" type="Ramp_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="410224381389204" type="JumpThroughPlatform">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="824022595458468" type="MovingPlatform">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="432766210702198" type="EPZCollision1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="211585134861660" type="EPZCollision3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="311759609047532" type="EPZCollison2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="860837757453803" type="EPZCollision3_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="219355354152201" type="MovingPlatform_EPZ">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="172494284443438" type="Spikes">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="227221860232468" type="WZCollison1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="690996878357122" type="GHZCollision1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="648283025790827">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="459422950753980" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="358253026726530" type="Block_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="557252450747913" type="Ramp1_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="974033016017439" type="Ramp2_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="758121819693807" type="Ramp3_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="210005991164337" type="Ramp4_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="908398408624027" type="Ramp5_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="812764474757645" type="Ramp6_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="457493664497484" type="Ramp7_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="254290236811981" type="Slope1_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="581197247903914" type="Slope2_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="877952838012752" type="SmallBlock_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="363512824876922" type="SmallSlope1_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="630489199743294" type="SmallSlope2_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="940667334273665" type="SmallSlope3_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="781422401988736" type="SmallSlope4_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="796238231397890" type="Block_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="336065535313626" type="Ramp1_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="990411528860435" type="Ramp2_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="803850944302151" type="Ramp3_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="613666185673741" type="Ramp4_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="189568366842511" type="Ramp5_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="535210739806992" type="Ramp6_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="966916808092813" type="Ramp7_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="810692672066296" type="SmallBlock_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="337121320305287" type="Block2_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="696774002982457" type="Ramp_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="102594121494374" type="Ramp_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="240784481755483" type="EPZCollision3_Path2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="172933350102044" type="EPZCollision3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="397091115047852" type="MovingPlatform_EPZ">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="785833939142279" type="WZCollison1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="469333009459824" type="GHZCollision1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="537959780292354">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="716851178872879" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="388924443751275" type="Block_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="667374531789861" type="Ramp1_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="383503242303846" type="Ramp2_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="496906269247381" type="Ramp3_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="159959126445453" type="Ramp4_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="971065731484126" type="Ramp5_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="530750756473011" type="Ramp6_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="278693152294326" type="Ramp7_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="509478707580677" type="Slope1_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="332654164754069" type="Slope2_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="244730945781296" type="SmallBlock_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="759492777965452" type="SmallSlope1_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="902592375325638" type="SmallSlope2_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="790789263268455" type="SmallSlope3_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="883478356949667" type="SmallSlope4_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="664942238306834" type="Block_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="686043415719427" type="Ramp1_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="872907470496307" type="Ramp2_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="139623143692827" type="Ramp3_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="307201541854541" type="Ramp4_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="486989243073962" type="Ramp5_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="794021519750954" type="Ramp6_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="617798743682924" type="Ramp7_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="208028612243810" type="SmallBlock_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="808941737529801" type="JumpThroughPlatform">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="142621457823544" type="MovingPlatform">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="212733253209065" type="Spikes">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="212651897201896" type="Block2_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="457218320775108" type="Ramp_Path1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="871904106386445" type="Ramp_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="101224386289145" type="MovingPillar">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="815978487899605" type="EPZCollision1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="506459711490267" type="EPZCollision3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="258133786511606" type="EPZCollison2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="845046357596044" type="EPZCollision3_Path2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="803258964316154" type="MovingPlatform_EPZ">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="730701246227437" type="Puyo_Blue">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="370432291838708" type="Puyo_Green">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="691900516642793" type="Puyo_Purple">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="670557929151642" type="Puyo_Red">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="956170888282877" type="Puyo_Yellow">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="849727799571017" type="MovingBlocks">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="674430539368718" type="WZCollison1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="187855179893638" type="GHZCollision1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="434712095906519" type="BPZ_BossFloor">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="817001418871432" type="Portal_GoThroughWall">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

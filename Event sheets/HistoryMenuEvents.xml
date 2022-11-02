@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HistoryMenuEvents</name>
+    <events>
+        <event-group description="" sid="869088725800076" title="HistoryMenuControls">
+            <sub-events>
+                <event-block sid="197558058839236">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="211462661837262" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="772362529464318" type="System">
+                            <param id="0" name="Variable">MainMenuActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="465649407311000" type="BlackFadeout">
+                            <param id="0" name="Fade-in time">1.0</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="742165895416777" type="BlackFadeout">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="848307554252208" type="BlackFadeout" />
+                        <action id="-16" name="Wait" sid="315433806636276" type="System">
+                            <param id="0" name="Seconds">1.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="134864583183637" type="System">
+                            <param id="0" name="Layout">ExtrasMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="152624897073831">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="743818443730318" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="936118273835405" type="Camera">
+                            <param id="0" name="Y">Self.Y-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="622686594314388">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="838309033047006" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="311252071602400" type="Camera">
+                            <param id="0" name="Y">Self.Y+3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="409020587180451">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="148496349708264" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="760111963200847" type="HistoryPages">
+                            <param id="0" name="Instance variable">Page</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="687949991698619" type="HistoryPages">
+                            <param id="0" name="Instance variable">Page</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="599480440475326">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="469953755332322" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="359295137143158" type="HistoryPages">
+                            <param id="0" name="Instance variable">Page</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="185944823804866" type="HistoryPages">
+                            <param id="0" name="Instance variable">Page</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="346932516059998">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="274562098439132" type="HistoryPages">
+                            <param id="0" name="Instance variable">Page</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="423005038474155" type="HistoryPages">
+                            <param id="0" name="Animation">&quot;EggPlant&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319468246960837">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="563538322001647" type="HistoryPages">
+                            <param id="0" name="Instance variable">Page</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="302620851149952" type="HistoryPages">
+                            <param id="0" name="Animation">&quot;BrightParadise&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="881611947325037">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="664344729567650" type="HistoryPages">
+                            <param id="0" name="Instance variable">Page</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="389534029027969" type="HistoryPages">
+                            <param id="0" name="Animation">&quot;GreenHill&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="448454866617005">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="505383244368869" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="461002735443957" type="BlackFadeout" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

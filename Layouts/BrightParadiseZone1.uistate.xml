@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the layout was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <camera>
+        <position-x>16678.8</position-x>
+        <position-y>1206.14</position-y>
+        <position-z>117.645</position-z>
+        <lookat-x>16678.8</lookat-x>
+        <lookat-y>1206.14</lookat-y>
+        <lookat-z>0</lookat-z>
+    </camera>
+    <snap-to-grid>1</snap-to-grid>
+    <show-grid>0</show-grid>
+    <snap-width>8</snap-width>
+    <snap-height>8</snap-height>
+    <show-collision-polys>1</show-collision-polys>
+    <translucent-inactive-layers>1</translucent-inactive-layers>
+    <properties>
+        <property expanded="1" name="Layout properties" />
+        <property expanded="0" name="Layout Size" />
+        <property expanded="0" name="Margins" />
+        <property expanded="1" name="Effects" />
+    </properties>
+    <active-layer name="Objects" />
+    <layers>
+        <layer locked="1" name="Stars1" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Stars2" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Stars3" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Mountains1" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Mountains2" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Bridge" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="BackBuildings" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="MiddleBuildings" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="FrontBuildings" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Water1" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Water2" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Water3" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Water4" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Water5" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Water6" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Water7" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Water8" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="WaterOverlay" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Trees" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Wall1" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Wall2" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Underground" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="LowArtPriorty" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Objects" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="HFZtileset" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="HighArtPriority" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Collisons" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="HUD" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="HUD_DebugMode" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Water" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="HUD_TitleCard" parallax-in-editor="0" visible="0" />
+    </layers>
+</c2uistate>

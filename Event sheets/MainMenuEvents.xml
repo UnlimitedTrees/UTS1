@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMenuEvents</name>
+    <events>
+        <variable constant="0" name="MainMenuActive" sid="645255733485554" static="0" type="number">0</variable>
+        <event-group description="" sid="572997552323659" title="MainMenuControls">
+            <sub-events>
+                <event-block sid="367504891710782">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="714928134764421" type="Keyboard">
+                            <param id="0" name="Key">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="730787726367219" type="Audio">
+                            <param id="0" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="514442521992313">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="602184716959973" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="171463846849289" type="SelectedSlot">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Y co-ordinate">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="379445091981835" type="SelectedSlot">
+                            <param id="0" name="Y">SelectedSlot.Y-72</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="715981192638591" type="SelectedSlot">
+                            <param id="0" name="Instance variable">Slot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="485112391222967" type="Audio">
+                            <param id="0" name="Audio file">Score</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="490775073664706">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="482574759939671" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="835140397696422" type="SelectedSlot">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Y co-ordinate">184</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="814843076858141" type="SelectedSlot">
+                            <param id="0" name="Y">SelectedSlot.Y+72</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="108808851516392" type="SelectedSlot">
+                            <param id="0" name="Instance variable">Slot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="926786994319619" type="Audio">
+                            <param id="0" name="Audio file">Score</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="890985259721938">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="194793252406326" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="477625754291975" type="System">
+                            <param id="0" name="Variable">MainMenuActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="491796459442215" type="BlackFadeout">
+                            <param id="0" name="Fade-in time">1.0</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="352373835698190" type="BlackFadeout">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="859583026167889" type="BlackFadeout" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="370063408899512">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="645164458964164" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="439172380774486" type="System">
+                                    <param id="0" name="Seconds">1.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="424837905673595" type="System">
+                                    <param id="0" name="Layout">Menu_StageSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="233333443639724">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="260230470057088" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="299068705200147" type="System">
+                                    <param id="0" name="Seconds">1.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="855805675571758" type="System">
+                                    <param id="0" name="Layout">ExtrasMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="106410685024497">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="852552691245137" type="SelectedSlot">
+                                    <param id="0" name="Instance variable">Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="663658287966580" type="System">
+                                    <param id="0" name="Seconds">1.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="940463992377967" type="System">
+                                    <param id="0" name="Layout">OptionsMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="582036242596305">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="320334072579713" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="596516485506630" type="BlackFadeout" />
+            </actions>
+            <sub-events>
+                <event-block sid="980875432713533">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="975382841203423" type="System">
+                            <param id="0" name="Variable">MainMenuActive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="335533479063626" type="Audio">
+                            <param id="0" name="Audio file">menumusic</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;menumusic&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

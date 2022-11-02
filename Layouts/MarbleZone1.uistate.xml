@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the layout was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <camera>
+        <position-x>5065.08</position-x>
+        <position-y>391.573</position-y>
+        <position-z>155.389</position-z>
+        <lookat-x>5065.08</lookat-x>
+        <lookat-y>391.573</lookat-y>
+        <lookat-z>0</lookat-z>
+    </camera>
+    <snap-to-grid>1</snap-to-grid>
+    <show-grid>1</show-grid>
+    <snap-width>16</snap-width>
+    <snap-height>16</snap-height>
+    <show-collision-polys>1</show-collision-polys>
+    <translucent-inactive-layers>1</translucent-inactive-layers>
+    <properties>
+        <property expanded="1" name="Layout properties" />
+        <property expanded="0" name="Layout Size" />
+        <property expanded="0" name="Margins" />
+        <property expanded="1" name="Effects" />
+    </properties>
+    <active-layer name="Objects" />
+    <layers>
+        <layer locked="0" name="BG1" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Sky1" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Sky2" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Sky3" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Sky4" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="BG2" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="BG3" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="BG4" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="LowArtPriority" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Objects" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="HighArtPriority" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Collisions" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="HUD" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="HUD_DebugMode" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Water" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="HUD_TitleCard" parallax-in-editor="0" visible="0" />
+    </layers>
+</c2uistate>

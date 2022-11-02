@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>UnlimitedTreesZoneEvents</name>
+    <events>
+        <include>TitleCardEvents</include>
+        <include>CollisionEvents</include>
+        <include>BasicControlEvents</include>
+        <event-block sid="829062420923166">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="763744428019723" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="288076623491423" type="System">
+                    <param id="0" name="Variable">ZoneID</param>
+                    <param id="1" name="Value">11.1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="991198483104461" type="TitleCard_ActNumber">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="715334529292440" type="TitleCard_Text_ZoneName">
+                    <param id="0" name="Text">&quot;UNLIMITED TREES&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="896710939267774">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="738981798993928" type="System">
+                            <param id="0" name="Variable">MusicPlaylist</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="855451619071894" type="Audio">
+                            <param id="0" name="Audio file">UnlimitedTreesZone (19.5 - Buken &amp; The Peshay</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;unlimitedtrees&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="742613095693115">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="318540942777308" type="System">
+                            <param id="0" name="Variable">MusicPlaylist</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="900294823608639" type="Audio">
+                            <param id="0" name="Audio file">Unused (Sonic 2 - 8bit Green Hills SMPS remix by A-S-H)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;unlimitedtrees&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="587968244618889" title="LevelLoopingEvents">
+            <sub-events>
+                <event-block sid="719674629477506">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="130734993425895" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="120645722725088" type="Camera">
+                            <param id="0" name="Y">112</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="542934309387106">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="182381937119324" type="Keyboard">
+                                    <param id="0" name="Key">68</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="139064498025182" type="UT_TreeTiles">
+                                    <param id="0" name="Width">Self.Width+112</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="692608743850137" type="UT_BG1">
+                                    <param id="0" name="Width">Self.Width+256</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="339255818823434" type="UT_BG2">
+                                    <param id="0" name="Width">Self.Width+256</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="512712746406740" type="UT_BG3">
+                                    <param id="0" name="Width">Self.Width+256</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="102529180543680" type="UT_BG4">
+                                    <param id="0" name="Width">Self.Width+256</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="849652828286442" type="UT_BG5">
+                                    <param id="0" name="Width">Self.Width+256</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="802617286571011">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="196373623396541" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="271774389855270" type="System">
+                            <param id="0" name="Variable">Checkpoint_Active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="182850625881842" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedRings</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="767906919577653" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime_Minutes</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="988200961327258" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime_Seconds</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="116716820841056" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedXPosition</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="814386563174009" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedYPosition</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="768052520420748" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="750581438172565" type="System">
+                            <param id="0" name="Variable">MainMenuActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="261265780619326" type="BlackFadeout">
+                            <param id="0" name="Fade-in time">0.5</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="384156721144257" type="BlackFadeout">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="259530507848652" type="BlackFadeout" />
+                        <action id="-16" name="Wait" sid="919785438276231" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="781016716123523" type="Audio" />
+                        <action id="-2" name="Go to layout" sid="600060716470663" type="System">
+                            <param id="0" name="Layout">MainMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

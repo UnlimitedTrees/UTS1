@@ -1,0 +1,952 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TitleCardEvents</name>
+    <events>
+        <comment>Make sure to include this eventsheet in your zone event sheet</comment>
+        <event-group description="" sid="691753967957202" title="Level Startup">
+            <sub-events>
+                <event-block sid="280964082257347">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="890331257392959" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="315119081087122" type="TitleCardPart1">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="683482444297643" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="219541119732237" type="TitleCardPart3">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="583980401246901" type="TitleCardPart2">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="288232206122458" type="TitleCard_SonicText">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="738544251821411" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="740635535963057" type="TitleCard_Text_ZoneName">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="628234973590278" type="TitleCard_Text_ZoneText">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="771550522971139" type="TitleCard_ActNumber">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="562660082531342" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="141393665578187" type="BlackFadeout" />
+                        <action id="-10" name="Set value" sid="853323747316326" type="TitleCardPart3">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="809128344461878" type="TitleCardPart2">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="400343422668820" type="TitleCard_SonicText">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="987799281870226" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="616597359320770" type="TitleCardPart1">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="847279362357346" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="624045891596927" type="TitleCard_Text_ZoneName">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="401901836245803" type="TitleCard_Text_ZoneText">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="590031995427186" type="TitleCard_ActNumber">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="586517676501717">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="934591048040627" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="172681067179335">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="915749121922010" type="TitleCard_Text_ZoneName">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">80</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="387899354501393" type="TitleCard_Text_ZoneName">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="476416728707024" type="TitleCard_Text_ZoneName">
+                                    <param id="0" name="X">TitleCard_Text_ZoneName.X-10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="832252103348163">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="305746862571234" type="TitleCard_Text_ZoneName">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="308691103599881" type="TitleCard_Text_ZoneName">
+                                    <param id="0" name="X">TitleCard_Text_ZoneName.X-10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="590301684449910">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="199139250342615" type="TitleCard_Text_ZoneText">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">192</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="890447615892602" type="TitleCard_Text_ZoneText">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="862174387436450" type="TitleCard_Text_ZoneText">
+                                    <param id="0" name="X">TitleCard_Text_ZoneText.X+10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="805134227092255">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="641473466692521" type="TitleCard_Text_ZoneText">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="742987154552490" type="TitleCard_Text_ZoneText">
+                                    <param id="0" name="X">TitleCard_Text_ZoneText.X+10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="576400235406022">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="653011007020817" type="TitleCard_ActNumber">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">272</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="830744632567369" type="TitleCard_ActNumber">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="108344841932582" type="TitleCard_ActNumber">
+                                    <param id="0" name="X">TitleCard_ActNumber.X+10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="574332631295200">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="376765409468693" type="TitleCard_ActNumber">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="911051077086739" type="TitleCard_ActNumber">
+                                    <param id="0" name="X">TitleCard_ActNumber.X+10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="324169231223133">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="124591031343820" type="TitleCardPart1">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">-4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="411179112200686" type="TitleCardPart1">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="833672543869419" type="TitleCardPart1">
+                                    <param id="0" name="Y">TitleCardPart1.Y+7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="719394503897596">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="269369445281455" type="TitleCardPart1">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="833142485012489" type="TitleCardPart1">
+                                    <param id="0" name="Y">TitleCardPart1.Y-7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="513693252470417">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="819677396425264" type="TitleCardPart2">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">-1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="318492017279054" type="TitleCardPart2">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="316391827422620" type="TitleCardPart2">
+                                    <param id="0" name="X">TitleCardPart2.X-7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="177267247302237">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="278584142415543" type="TitleCardPart2">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="958607317256394" type="TitleCardPart2">
+                                    <param id="0" name="X">TitleCardPart2.X+7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="824012267703176">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="974321247910861" type="TitleCardPart3">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">-3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="987585422733540" type="TitleCardPart3">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="305747237613901" type="TitleCardPart3">
+                                    <param id="0" name="X">TitleCardPart3.X+7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="168564785147738">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="669562142674752" type="TitleCardPart3">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="332276801210483" type="TitleCardPart3">
+                                    <param id="0" name="X">TitleCardPart3.X-7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="983640912697247">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="190798200552509" type="TitleCard_SonicText">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">224</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="343586033077395" type="TitleCard_SonicText">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="118605482210010" type="TitleCard_SonicText">
+                                    <param id="0" name="X">TitleCard_SonicText.X-7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="880083147438109">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="387274118503363" type="TitleCard_SonicText">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="575885827589577" type="TitleCard_SonicText">
+                                    <param id="0" name="X">TitleCard_SonicText.X+7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="485292687292037" title="Endpost">
+            <sub-events>
+                <comment>Stuff for having end text move in as well as having Sonic be forced to go right</comment>
+                <event-block sid="194599001537311">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="383955254613895" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="229670987818743" type="RingEndCardText">
+                            <param id="0" name="Text">RingEndCardText.EndRingScore</param>
+                        </action>
+                        <action id="0" name="Set text" sid="572426048683845" type="ScoreEndText">
+                            <param id="0" name="Text">Score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="790044110996799" type="TimeEndText">
+                            <param id="0" name="Text">TimeEndText.EndScoreTime</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="154915228038820">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="267475237497364" type="HUD_EndCard">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="SonicPhysics" id="10" name="Simulate control" sid="882410190207617" type="Player">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="777249970576942">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="501223467843018" type="EndOfLevelTitleCard">
+                                    <param id="0" name="Instance variable">Start</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="605144928312888">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="287777398356754" type="HUD_EndCard">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">160</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="359474293482397" type="HUD_EndCard">
+                                            <param id="0" name="X">HUD_EndCard.X+3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="383490328572301">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="643620592162361" type="EndOfLevelTitleCard">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="646267021635399" type="EndOfLevelTitleCard">
+                                            <param id="0" name="X">EndOfLevelTitleCard.X+3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="121275115756468">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="110269746597481" type="ScoreEndText">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">128</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="559355301435798" type="ScoreEndText">
+                                            <param id="0" name="X">ScoreEndText.X+3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="925903535361992">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="780674810560889" type="TimeEndText">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">128</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="426339592005372" type="TimeEndText">
+                                            <param id="0" name="X">TimeEndText.X+3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="290595407770876">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="793877523264577" type="RingEndCardText">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">128</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="300657528239321" type="RingEndCardText">
+                                            <param id="0" name="X">RingEndCardText.X+3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Once player&apos;s X position is greater than the EndPost&apos;s X position, the end panel will spin</comment>
+                <event-block sid="139194185048901">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="773056197667530" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">EndPost.X</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="934687072706512" type="EndPost">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="803455536355572" type="EndTitleCardBlock2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="911727969141048" type="EndPost">
+                            <param id="0" name="Animation">&quot;Spin&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="513692186624188" type="EndPost">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="715809524719541" type="Camera">
+                            <param id="0" name="X">EndPost.X</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="757611107765706" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="196712725781279" type="Camera" />
+                    </actions>
+                </event-block>
+                <comment>Once the endpanel spins the player will automatically walk right</comment>
+                <event-block sid="175046893193259">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="791352305162824" type="EndPost">
+                            <param id="0" name="Animation">&quot;Spin&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="704832720629056" type="Audio" />
+                        <action id="-10" name="Set value" sid="187675542422304" type="RingEndCardText">
+                            <param id="0" name="Instance variable">EndRingScore</param>
+                            <param id="1" name="Value">Player.Rings*100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="183734512898757" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="215322885695032" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="876837570759864" type="HUD_EndCard">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="224231534115642" type="PlayerMask_Sonic">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="538500776467851" type="EndTitleCardBlock" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="960274107036763">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="916719080117186" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="711987308905358" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="990750745275560" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">50000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="789248650514581">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="199530949113103" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="392982735065464" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="992295149287288" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">45</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="649571097408911" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">10000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="993209415391089">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="228239036922026" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="432555287767350" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">45</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="660037112438708" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">59</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="590566057305876" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">5000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="428311623449179">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="675085383719793" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="721330909849552" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="914376992437544" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">29</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="827623868369150" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">4000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="964419740874234">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="870917643985622" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="594579653888189" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="520810078537064" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">59</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="912185068571521" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">3000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="959373072385790">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="551587321958882" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="565424110552885" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="335758816224766" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="771927833963457" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">2000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="570563356453807">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="965856813706933" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="962067977804007" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="193657824234822" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="955580271180369" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="635100470759416">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="979727665471116" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="364519394510293" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="303305399008753" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="153822938641910" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="690986721123443">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="662697702961581" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="263391490912190" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="342496044744805" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="624521216152230" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">59</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="152689261347265" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="468339092195018">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="484191647612494" type="TimeText">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="815464538457466" type="TimeText">
+                                    <param id="0" name="Instance variable">Seconds</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">59</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="271769497217215" type="TimeEndText">
+                                    <param id="0" name="Instance variable">EndScoreTime</param>
+                                    <param id="1" name="Value">100000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Once the player leaves the screen the end text comes in. Note: don&apos;t put a large slope that goes up at the end, as Sonic will have to walk up it, and it&apos;ll probably take awhile for him to get up and the stage will only end once he leaves the screen</comment>
+                <event-block sid="330497003655264">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="328151222038829" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="159218545954723" type="EndPost">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="776225790696570" type="EndOfLevelTitleCard">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="804636907390124" type="Audio">
+                            <param id="0" name="Audio file">zonefinish</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;zonefinish&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="627721932117368" type="EndOfLevelTitleCard">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="719946814054956" type="System">
+                            <param id="0" name="Seconds">7.0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="363742700989350" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">RingEndCardText.EndRingScore</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="734158656421236" type="RingEndCardText">
+                            <param id="0" name="Instance variable">EndRingScore</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="677190104310876" type="Audio">
+                            <param id="0" name="Audio file">Score</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="859305013216860" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="110194541043635" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">TimeEndText.EndScoreTime</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="448216941639400" type="TimeEndText">
+                            <param id="0" name="Instance variable">EndScoreTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="217373843268081" type="Audio">
+                            <param id="0" name="Audio file">Score</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="219770601210732" type="System">
+                            <param id="0" name="Variable">Checkpoint_Active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="930839426251678" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedRings</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="293350996160659" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime_Minutes</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="922745698796198" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime_Seconds</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="831820938412096" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedXPosition</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="984099351812987" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedYPosition</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="424501528186094" type="System">
+                            <param id="0" name="Variable">Checkpoint_SavedTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="690859690001422" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="698220794802035" type="BlackFadeout">
+                            <param id="0" name="Fade-in time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="899656538914757" type="BlackFadeout">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="443922499047107" type="BlackFadeout" />
+                    </actions>
+                </event-block>
+                <comment>Go to next zone</comment>
+                <event-block sid="499460305935108">
+                    <conditions>
+                        <condition behavior="Fade" id="1" name="On fade-in finished" sid="171447825996586" type="BlackFadeout" />
+                        <condition id="-7" name="Compare instance variable" sid="124417526209714" type="EndOfLevelTitleCard">
+                            <param id="0" name="Instance variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Test Zone Act 1 to Test Zone Act 2</comment>
+                        <event-block sid="576152918383749">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="488073499951076" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="964761182660953" type="System">
+                                    <param id="0" name="Layout">TestZone2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Test Zone Act 2 to Menu</comment>
+                        <event-block sid="490455218944519">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="121001465274644" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="849124412608011" type="System">
+                                    <param id="0" name="Layout">TitleScreen</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="454427348483833" type="System">
+                                    <param id="0" name="Variable">MainMenuActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Marble Zone Act 1 to Menu</comment>
+                        <event-block sid="293865118177268">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="621538402070506" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="909969352751758" type="System">
+                                    <param id="0" name="Layout">TitleScreen</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="153649065345271" type="System">
+                                    <param id="0" name="Variable">MainMenuActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Warehouse Zone extra to Menu</comment>
+                        <event-block sid="972227200652071">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="455639907877212" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">12.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="793735075669679" type="System">
+                                    <param id="0" name="Layout">MainMenu</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="108959343672805" type="System">
+                                    <param id="0" name="Variable">MainMenuActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855048271867286">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="450982528128222" type="System">
+                                    <param id="0" name="Variable">ZoneID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">13.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="727001404397945" type="System">
+                                    <param id="0" name="Layout">MainMenu</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="520646735365840" type="System">
+                                    <param id="0" name="Variable">MainMenuActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MarbleZone1Events</name>
+    <events>
+        <include>TitleCardEvents</include>
+        <include>CollisionEvents</include>
+        <include>BasicControlEvents</include>
+        <event-block sid="724831035078673">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="752281604677134" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="641971224067984" type="Audio">
+                    <param id="0" name="Audio file">marblezoneact1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;marblezone1&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="778297312145341" type="System">
+                    <param id="0" name="Variable">ZoneID</param>
+                    <param id="1" name="Value">1.1</param>
+                </action>
+                <action id="4" name="Set animation" sid="371567129420337" type="TitleCard_ActNumber">
+                    <param id="0" name="Animation">&quot;Act1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set text" sid="782254089428049" type="TitleCard_Text_ZoneName">
+                    <param id="0" name="Text">&quot; MARBLE&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="170946879317068" title="CrushingPillar">
+            <sub-events>
+                <event-block sid="167494470626209">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="812649282944723" type="Player">
+                            <param id="0" name="Object">MovingPillar</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="279136942982223" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="620528985866769" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="256376463773830" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="676384349769540" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="520320145808207" type="DeathPlane" />
+                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="638061981464833" type="Player">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="608834575304750" type="Player">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="825891955042688" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="966487268085706" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="284330350008106" type="Camera" />
+                        <action id="-11" name="Subtract from" sid="210878533446362" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="548553735791821" type="Audio">
+                            <param id="0" name="Audio file">Death</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="199775869189041" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="314769668772504" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="327698174535082" title="FallingBlocks">
+            <sub-events>
+                <event-block sid="570552769851903">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="505821037400249" type="FallingBlock">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="484122210512081" type="FallingBlock">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="546351785370869" type="FallingBlock">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="914137806628871" type="FallingBlock">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="927485693977758">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="640156063287227" type="FallingBlock" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="643080314236764" type="FallingBlock">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="358444880710396" type="FallingBlock">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="471033171019428" title="MetalCrusher">
+            <sub-events>
+                <event-block sid="498321819598229">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="749225585642817" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="309316566885108" type="MetalCrusher_Chain">
+                            <param id="0" name="Pin to">MetalCrusher</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="132306100569129" type="MetalCrusher_DeathPlane">
+                            <param id="0" name="Pin to">MetalCrusher</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="679744557438078">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="507999305220057" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="118683877408598">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="939151760617695" type="MetalCrusher">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="965357940831682" type="MetalCrusher">
+                                    <param id="0" name="Y">MetalCrusher.Y-0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="389340298437268">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="939200818685187" type="MetalCrusher">
+                            <param id="0" name="Object">MetalBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="757935750940642" type="MetalCrusher">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="799396571828435" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="917348335798772" type="MetalCrusher">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="295071231966481" type="MetalCrusher">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="693031152461219">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="279161605458325" type="MetalCrusher" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="211962586151400" type="MetalCrusher">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="534077842657134" type="MetalCrusher">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="183665010157338" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="279062203993975" type="MetalCrusher">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="308758746186922">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="741144095750744" type="Player">
+                            <param id="0" name="Object">MetalCrusher_DeathPlane</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="162502527900087" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="333176734944605" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition behavior="Solid" id="0" name="Is enabled" sid="343541359218387" type="MetalCrusher" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="467357340256360" type="MetalCrusher_DeathPlane" />
+                        <action id="-10" name="Set value" sid="333058482325540" type="Player">
+                            <param id="0" name="Instance variable">Path</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="923955959744240" type="Player">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="823134830672098" type="DeathPlane" />
+                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="543890028539361" type="Player">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="754772910665045" type="Player">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="901684898107404" type="PlayerMask_Sonic">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="158505164755017" type="Player">
+                            <param id="0" name="Instance variable">ControlMode</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="412742088893210" type="Camera" />
+                        <action id="-11" name="Subtract from" sid="820021121954776" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="300979857154884" type="Audio">
+                            <param id="0" name="Audio file">Death</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="793003255962001" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="409500274456670" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="847832174324014" title="SinkingPlatform">
+            <sub-events>
+                <event-block sid="290842074272235">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="807753946153991" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="500617846079797" type="SinkingPlatform">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="917884936718200" type="SinkingPlatform">
+                            <param id="0" name="Y">SinkingPlatform.Y+0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="104819907214493">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="166100380625070" type="Player">
+                            <param id="0" name="Object">SinkingPlatform</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="430604091783486" type="SinkingPlatform">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="350623721467773" type="SinkingPlatform">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="992427244497205">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="498773684985800" type="SinkingPlatform">
+                            <param id="0" name="Object">DeathPlane</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="613870983818567" type="SinkingPlatform">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
